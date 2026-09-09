@@ -1,0 +1,3209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SSS Furniture Removals | Secunda & Nationwide</title>
+
+  <meta
+    name="description"
+    content="SSS Furniture Removals based in Secunda, Mpumalanga. Professional furniture removals, packing, wrapping, loading, transport and unloading nationwide."
+  >
+
+  <meta
+    name="keywords"
+    content="furniture removals Secunda, furniture removals Mpumalanga, moving company Secunda, nationwide furniture removals, household removals, office relocations, packing services"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --navy: #0B1E3D;
+      --yellow: #FFC107;
+      --white: #FFFFFF;
+      --dark: #07152c;
+      --light: #f5f7fa;
+      --text: #24344d;
+      --shadow: 0 15px 40px rgba(11, 30, 61, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .professional-navbar {
+      background: rgba(11, 30, 61, 0.98);
+      padding: 12px 0;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-truck {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-main {
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand-sub {
+      color: var(--yellow);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+      margin-top: 4px;
+    }
+
+    .professional-toggler {
+      border: 2px solid var(--yellow);
+      padding: 7px 10px;
+      border-radius: 6px;
+    }
+
+    .professional-toggler .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    .professional-dropdown {
+      background: var(--navy);
+      border: 1px solid rgba(255, 193, 7, 0.35);
+      border-radius: 10px;
+      padding: 8px;
+      margin-top: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .professional-dropdown .nav-link {
+      color: var(--white) !important;
+      font-weight: 700;
+      padding: 12px 15px !important;
+      border-radius: 7px;
+      transition: 0.25s ease;
+    }
+
+    .professional-dropdown .nav-link:hover {
+      background: var(--yellow);
+      color: var(--navy) !important;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 21, 44, 0.92) 0%,
+          rgba(7, 21, 44, 0.78) 45%,
+          rgba(7, 21, 44, 0.35) 100%
+        ),
+        url('img1.jpeg') center center / cover no-repeat;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255, 193, 7, 0.08) 45%,
+          transparent 65%
+        );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 0 80px;
+      animation: heroEntrance 1s ease forwards;
+    }
+
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-label {
+      display: inline-block;
+      color: var(--yellow);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--yellow);
+      padding-left: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 0.98;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      max-width: 850px;
+    }
+
+    .hero h1 span {
+      color: var(--yellow);
+    }
+
+    .hero-description {
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-main {
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 800;
+      padding: 14px 25px;
+      border-radius: 5px;
+      border: 2px solid var(--yellow);
+      transition: 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-main:hover {
+      background: transparent;
+      color: var(--yellow);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-main {
+      background: transparent;
+      color: var(--white);
+      font-weight: 800;
+      padding: 14px 25px;
+      border-radius: 5px;
+      border: 2px solid var(--white);
+      transition: 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-outline-main:hover {
+      background: var(--white);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(11, 30, 61, 0.94);
+      border-top: 2px solid rgba(255, 193, 7, 0.55);
+      padding: 18px 0;
+    }
+
+    .hero-bottom-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 30px;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .hero-bottom-inner span {
+      color: var(--yellow);
+    }
+
+    /* =========================================================
+       GENERAL SECTION STYLING
+    ========================================================= */
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .section-title span {
+      color: var(--yellow);
+    }
+
+    .section-text {
+      color: #59677c;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-section {
+      background: var(--white);
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-badge {
+      position: absolute;
+      right: -20px;
+      bottom: 25px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 25px;
+      border-left: 5px solid var(--yellow);
+      box-shadow: var(--shadow);
+      max-width: 230px;
+    }
+
+    .about-badge strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 27px;
+      font-weight: 900;
+    }
+
+    .about-badge small {
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .about-copy {
+      margin-bottom: 20px;
+    }
+
+    .about-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 0;
+    }
+
+    .about-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .about-list i {
+      color: var(--yellow);
+      font-size: 20px;
+    }
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services-section {
+      background: var(--light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card {
+      height: 100%;
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(11, 30, 61, 0.08);
+      transition: 0.3s ease;
+      border-bottom: 4px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-bottom-color: var(--yellow);
+      box-shadow: var(--shadow);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 25px;
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 7px;
+      background: var(--navy);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .service-content h3 {
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .service-content p {
+      color: #647287;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* =========================================================
+       WHY CHOOSE US
+    ========================================================= */
+
+    .why-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .why-section .section-title {
+      color: var(--white);
+    }
+
+    .why-section .section-text {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .why-card {
+      height: 100%;
+      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.04);
+      padding: 30px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--yellow);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .why-icon {
+      color: var(--yellow);
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .why-card h3 {
+      font-size: 19px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process-section {
+      background: var(--white);
+    }
+
+    .process-card {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .process-number {
+      width: 70px;
+      height: 70px;
+      background: var(--yellow);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 900;
+      margin: 0 auto 20px;
+    }
+
+    .process-card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: #69778b;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       SERVICE HIGHLIGHT
+    ========================================================= */
+
+    .highlight-section {
+      background: var(--light);
+    }
+
+    .highlight-box {
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 50px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-box::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: -100px;
+      top: -100px;
+      border: 60px solid rgba(255, 193, 7, 0.08);
+      border-radius: 50%;
+    }
+
+    .highlight-box h2 {
+      color: var(--white);
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .highlight-box h2 span {
+      color: var(--yellow);
+    }
+
+    .highlight-box p {
+      color: rgba(255,255,255,0.78);
+      line-height: 1.8;
+      max-width: 750px;
+    }
+
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+    }
+
+    .highlight-list li {
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .highlight-list i {
+      color: var(--yellow);
+      margin-right: 6px;
+    }
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    .gallery-section {
+      background: var(--white);
+    }
+
+    .gallery-item {
+      height: 280px;
+      overflow: hidden;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(11,30,61,0.10);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 20px;
+      background: linear-gradient(
+        transparent,
+        rgba(7,21,44,0.9)
+      );
+      color: var(--white);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta-section {
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background:
+        linear-gradient(
+          rgba(11,30,61,0.88),
+          rgba(11,30,61,0.88)
+        ),
+        url('img10.jpeg') center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(38px, 5vw, 65px);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .cta-content h2 span {
+      color: var(--yellow);
+    }
+
+    .cta-content p {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    /* =========================================================
+       REVIEWS
+    ========================================================= */
+
+    .reviews-section {
+      background: var(--light);
+    }
+
+    .review-card {
+      height: 100%;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(11,30,61,0.08);
+      position: relative;
+      border-top: 4px solid var(--yellow);
+    }
+
+    .review-stars {
+      color: var(--yellow);
+      font-size: 19px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .review-text {
+      color: #526177;
+      font-size: 14px;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .review-name {
+      color: var(--navy);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .review-source {
+      color: #8994a4;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    /* =========================================================
+       FAQ
+    ========================================================= */
+
+    .faq-section {
+      background: var(--white);
+    }
+
+    .accordion-item {
+      border: none;
+      margin-bottom: 12px;
+      border-radius: 7px !important;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(11,30,61,0.07);
+    }
+
+    .accordion-button {
+      font-weight: 800;
+      color: var(--navy);
+      background: var(--white);
+      padding: 20px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .accordion-button::after {
+      background-size: 16px;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      filter: brightness(0) invert(1);
+    }
+
+    .accordion-body {
+      color: #647287;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+      position: relative;
+      background:
+        linear-gradient(
+          rgba(11,30,61,0.92),
+          rgba(11,30,61,0.92)
+        ),
+        url('img9.jpeg') center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .contact-section .section-title {
+      color: var(--white);
+    }
+
+    .contact-section .section-text {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .contact-info-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .contact-info-item h4 {
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .contact-info-item a,
+    .contact-info-item p {
+      color: var(--white);
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact-info-item a:hover {
+      color: var(--yellow);
+    }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 9px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form h3 {
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .form-label {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .form-control,
+    .form-select {
+      border: 1px solid #dbe1e8;
+      padding: 12px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--yellow);
+      box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.15);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 65px 0 25px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-weight: 900;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand span {
+      color: var(--yellow);
+    }
+
+    .footer-description {
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-top: 15px;
+      max-width: 400px;
+    }
+
+    .footer-heading {
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 13px;
+    }
+
+    .footer-contact-item i {
+      color: var(--white);
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a,
+    .footer-contact-item span {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .footer-btn-call {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .footer-btn-call:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .footer-btn-email {
+      border: 1px solid var(--yellow);
+      color: var(--yellow);
+    }
+
+    .footer-btn-email:hover {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 45px;
+      padding-top: 20px;
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+    }
+
+    /* =========================================================
+       FLOATING CALL BUTTON
+    ========================================================= */
+
+    .floating-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      background: var(--yellow);
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      z-index: 9998;
+      transition: 0.25s ease;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.08);
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 991px) {
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .hero-content {
+        padding: 110px 0 90px;
+      }
+
+      .about-badge {
+        right: 15px;
+      }
+
+      .professional-dropdown {
+        margin-top: 10px;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+
+      .section-padding {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: 680px;
+        background-position: 65% center;
+      }
+
+      .hero-content {
+        padding: 100px 0 100px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-main,
+      .btn-outline-main {
+        text-align: center;
+      }
+
+      .hero-bottom {
+        position: relative;
+      }
+
+      .hero-bottom-inner {
+        font-size: 10px;
+        gap: 8px 15px;
+      }
+
+      .about-image {
+        height: 380px;
+        margin-bottom: 35px;
+      }
+
+      .about-badge {
+        right: 10px;
+        bottom: 20px;
+      }
+
+      .highlight-box {
+        padding: 30px 25px;
+      }
+
+      .gallery-item {
+        height: 230px;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
+        margin-top: 35px;
+      }
+
+      .footer-buttons {
+        max-width: 300px;
+      }
+
+    }
+
+    @media (max-width: 380px) {
+
+      .brand-main {
+        font-size: 14px;
+      }
+
+      .brand-sub {
+        font-size: 8px;
+      }
+
+      .brand-truck {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .hero-bottom-inner {
+        display: block;
+      }
+
+      .hero-bottom-inner div {
+        margin-bottom: 5px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVBAR
+  ======================================================== -->
+
+  <nav class="navbar navbar-expand-lg fixed-top professional-navbar">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#home">
+
+        <div class="brand-area">
+
+          <div class="brand-truck">
+            <i class="bi bi-truck"></i>
+          </div>
+
+          <div class="brand-text">
+
+            <div class="brand-main">
+              SSS FURNITURE
+            </div>
+
+            <div class="brand-sub">
+              REMOVALS
+            </div>
+
+          </div>
+
+        </div>
+
+      </a>
+
+      <button
+        class="navbar-toggler professional-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="mainNavbar"
+      >
+
+        <ul class="navbar-nav ms-auto professional-dropdown">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">
+              <i class="bi bi-house-door-fill me-2"></i>
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="bi bi-building-fill me-2"></i>
+              About Us
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services">
+              <i class="bi bi-box-seam-fill me-2"></i>
+              Services
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">
+              <i class="bi bi-star-fill me-2"></i>
+              Reviews
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              <i class="bi bi-telephone-fill me-2"></i>
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          PROFESSIONAL FURNITURE REMOVALS
+        </div>
+
+        <h1>
+          MOVING MADE <span>SIMPLE.</span>
+        </h1>
+
+        <p class="hero-description">
+          Based in Secunda, Mpumalanga, SSS Furniture
+          Removals provides professional moving services nationwide.
+          We wrap, pack, load, transport and unload your belongings
+          with care — helping make your move easier, safer and less
+          stressful.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#contact"
+            class="btn-main"
+          >
+            <i class="bi bi-chat-square-text-fill me-2"></i>
+            Get a Free Quote
+          </a>
+
+          <a
+            href="tel:+27664316228"
+            class="btn-outline-main"
+          >
+            <i class="bi bi-telephone-fill me-2"></i>
+            Call Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-bottom">
+
+      <div class="container">
+
+        <div class="hero-bottom-inner">
+
+          <div>
+            <span>HOUSEHOLD MOVES</span>
+          </div>
+
+          <div>•</div>
+
+          <div>
+            <span>OFFICE RELOCATIONS</span>
+          </div>
+
+          <div>•</div>
+
+          <div>
+            <span>PACKING & WRAPPING</span>
+          </div>
+
+          <div>•</div>
+
+          <div>
+            <span>NATIONWIDE MOVES</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       ABOUT
+  ======================================================== -->
+
+  <section class="about-section section-padding" id="about">
+
+    <div class="container">
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+
+          <div class="about-image-wrap">
+
+            <img
+              src="img2.jpeg"
+              alt="SSS Furniture Removals"
+              class="about-image"
+            >
+
+            <div class="about-badge">
+
+              <strong>SECUNDA</strong>
+
+              <small>
+                Proudly based in Mpumalanga and moving customers
+                nationwide.
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <div class="section-label">
+            About SSS Furniture Removals
+          </div>
+
+          <h2 class="section-title">
+            MOVING YOUR HOME.<br>
+            <span>MOVING WHAT MATTERS.</span>
+          </h2>
+
+          <p class="section-text about-copy">
+            At SSS Furniture Removals, we understand that
+            moving is more than simply transporting furniture — it is
+            about moving the things that matter to you safely and with
+            care.
+          </p>
+
+          <p class="section-text about-copy">
+            Based in Secunda, Mpumalanga, we provide professional
+            furniture removal and relocation services nationwide.
+            Whether you are moving to a new home, relocating an office,
+            or simply need furniture transported, our team is ready
+            to assist.
+          </p>
+
+          <p class="section-text about-copy">
+            We take care of the process from start to finish,
+            including wrapping, packing, loading, transporting and
+            unloading your belongings. Our goal is to make every move
+            as smooth, organised and stress-free as possible while
+            treating your furniture and personal belongings with the
+            care they deserve.
+          </p>
+
+          <p class="section-text about-copy">
+            With a focus on reliable service, reasonable pricing and
+            professional workmanship, SSS Furniture
+            Removals is committed to making your move easier —
+            wherever you are going.
+          </p>
+
+          <ul class="about-list">
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Professional wrapping and packing
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Careful loading and unloading
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Local and nationwide moves
+            </li>
+
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              Friendly and professional service
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       SERVICES
+  ======================================================== -->
+
+  <section class="services-section section-padding" id="services">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <div class="section-label">
+          What We Do
+        </div>
+
+        <h2 class="section-title">
+          WE <span>MOVE IT ALL.</span>
+        </h2>
+
+        <p class="section-text mx-auto" style="max-width:760px;">
+          From packing your belongings to safely unloading them at
+          your destination, we provide a complete moving service
+          designed around your needs.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <!-- SERVICE 1 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img3.jpeg"
+              alt="Household furniture removals"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+
+              <h3>
+                Household Removals
+              </h3>
+
+              <p>
+                Moving home? We carefully pack, wrap, load,
+                transport and unload your household furniture
+                and belongings.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SERVICE 2 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img4.jpeg"
+              alt="Office relocation"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-building"></i>
+              </div>
+
+              <h3>
+                Office Relocations
+              </h3>
+
+              <p>
+                Relocating your office? We help move office
+                furniture, equipment and belongings efficiently
+                and with care.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SERVICE 3 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img5.jpeg"
+              alt="Long distance furniture removals"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-signpost-2-fill"></i>
+              </div>
+
+              <h3>
+                Nationwide Moves
+              </h3>
+
+              <p>
+                Moving from Secunda to another part of South Africa?
+                We provide furniture removal services nationwide.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SERVICE 4 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img6.jpeg"
+              alt="Furniture moving service"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-box-seam-fill"></i>
+              </div>
+
+              <h3>
+                Furniture Moving
+              </h3>
+
+              <p>
+                Need furniture moved safely? We handle your
+                furniture carefully from collection through
+                to delivery.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SERVICE 5 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img7.jpeg"
+              alt="Packing and wrapping service"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-box2-heart-fill"></i>
+              </div>
+
+              <h3>
+                Packing & Wrapping
+              </h3>
+
+              <p>
+                We wrap and pack your belongings carefully to help
+                protect your furniture and household items during
+                the move.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SERVICE 6 -->
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="service-card">
+
+            <img
+              src="img8.jpeg"
+              alt="Complete relocation service"
+              class="service-image"
+            >
+
+            <div class="service-content">
+
+              <div class="service-icon">
+                <i class="bi bi-truck"></i>
+              </div>
+
+              <h3>
+                Full Relocation Service
+              </h3>
+
+              <p>
+                From packing and loading to transportation and
+                unloading, we can assist with your move from
+                start to finish.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       WHY CHOOSE US
+  ======================================================== -->
+
+  <section class="why-section section-padding">
+
+    <div class="container">
+
+      <div class="row align-items-center mb-5">
+
+        <div class="col-lg-6">
+
+          <div class="section-label">
+            Why Choose SSS
+          </div>
+
+          <h2 class="section-title">
+            RELIABLE MOVES.<br>
+            <span>CAREFUL HANDS.</span>
+          </h2>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <p class="section-text">
+            We know that your furniture and personal belongings
+            are important. That's why we focus on careful handling,
+            professional service and making your moving experience
+            as stress-free as possible.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+
+            <h3>
+              Careful
+            </h3>
+
+            <p>
+              Your belongings are handled with care during
+              packing, loading, transportation and unloading.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+
+            <h3>
+              Reliable
+            </h3>
+
+            <p>
+              We aim to provide an organised and dependable
+              moving service from start to finish.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+
+            <h3>
+              Professional
+            </h3>
+
+            <p>
+              Friendly, professional service focused on making
+              your move easier and less stressful.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+
+            <h3>
+              Nationwide
+            </h3>
+
+            <p>
+              Based in Secunda, Mpumalanga and available for
+              moves across South Africa.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       PROCESS
+  ======================================================== -->
+
+  <section class="process-section section-padding">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <div class="section-label">
+          Our Process
+        </div>
+
+        <h2 class="section-title">
+          A SIMPLE WAY TO <span>MOVE.</span>
+        </h2>
+
+        <p class="section-text mx-auto" style="max-width:700px;">
+          We make the moving process straightforward, from your
+          first enquiry through to delivery.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Request A Quote
+            </h3>
+
+            <p>
+              Tell us where you're moving from, where you're going
+              and what needs to be moved.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Plan Your Move
+            </h3>
+
+            <p>
+              We discuss your requirements and help organise the
+              details of your move.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Pack & Move
+            </h3>
+
+            <p>
+              We wrap, pack, load and transport your belongings
+              with care.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <h3>
+              Safe Delivery
+            </h3>
+
+            <p>
+              Your belongings are unloaded at your destination,
+              completing your move.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       HIGHLIGHT
+  ======================================================== -->
+
+  <section class="highlight-section section-padding">
+
+    <div class="container">
+
+      <div class="highlight-box">
+
+        <div class="section-label">
+          Complete Moving Assistance
+        </div>
+
+        <h2>
+          WE WRAP. WE PACK.<br>
+          <span>WE MOVE.</span>
+        </h2>
+
+        <p>
+          Whether you need a complete household move or simply
+          need furniture transported from one location to another,
+          our team can assist. We take care of the heavy work so
+          you can focus on settling into your new space.
+        </p>
+
+        <ul class="highlight-list">
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Wrapping
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Packing
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Loading
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Transport
+          </li>
+
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Unloading
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       GALLERY
+  ======================================================== -->
+
+  <section class="gallery-section section-padding">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <div class="section-label">
+          Our Work
+        </div>
+
+        <h2 class="section-title">
+          MOVING <span>MADE EASY.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img3.jpeg"
+              alt="Furniture removal"
+            >
+
+            <div class="gallery-overlay">
+              Household Moves
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img4.jpeg"
+              alt="Office relocation"
+            >
+
+            <div class="gallery-overlay">
+              Office Relocations
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img5.jpeg"
+              alt="Nationwide moving"
+            >
+
+            <div class="gallery-overlay">
+              Nationwide Moving
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img6.jpeg"
+              alt="Furniture transport"
+            >
+
+            <div class="gallery-overlay">
+              Furniture Transport
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img7.jpeg"
+              alt="Packing service"
+            >
+
+            <div class="gallery-overlay">
+              Packing & Wrapping
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+
+          <div class="gallery-item">
+
+            <img
+              src="img8.jpeg"
+              alt="Moving service"
+            >
+
+            <div class="gallery-overlay">
+              Complete Relocations
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       CTA
+  ======================================================== -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <div class="cta-content">
+
+        <div class="section-label">
+          Ready To Move?
+        </div>
+
+        <h2>
+          LET'S GET YOU <span>MOVING.</span>
+        </h2>
+
+        <p>
+          From Secunda to anywhere in South Africa, SSS
+          Furniture Removals is ready to help with your next move.
+          Contact us today for a quote.
+        </p>
+
+        <div class="hero-buttons justify-content-center">
+
+          <a
+            href="#contact"
+            class="btn-main"
+          >
+            <i class="bi bi-chat-square-text-fill me-2"></i>
+            Get A Free Quote
+          </a>
+
+          <a
+            href="tel:+27664316228"
+            class="btn-outline-main"
+          >
+            <i class="bi bi-telephone-fill me-2"></i>
+            066 431 6228
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       REVIEWS
+  ======================================================== -->
+
+  <section class="reviews-section section-padding" id="reviews">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <div class="section-label">
+          Customer Reviews
+        </div>
+
+        <h2 class="section-title">
+          WHAT OUR CUSTOMERS <span>SAY.</span>
+        </h2>
+
+        <p class="section-text mx-auto" style="max-width:700px;">
+          We are proud to have helped customers with their moves
+          and appreciate every review and recommendation.
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+
+        <!-- REVIEW 1 -->
+
+        <div class="col-lg-4">
+
+          <div class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p class="review-text">
+              “No complains! no worries! no stress! They packed all
+              my items up neatly and safely, and placed them in the
+              same manner into my new home. Great stuff guys,
+              thanks!”
+            </p>
+
+            <div class="review-name">
+              Shalin Satiyadev
+            </div>
+
+            <div class="review-source">
+              Google Review
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 2 -->
+
+        <div class="col-lg-4">
+
+          <div class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p class="review-text">
+              “Quick, reasonable prices, clean and very professional.
+              Moved from Secunda to Pretoria. I highly recommend
+              them.”
+            </p>
+
+            <div class="review-name">
+              Tumelo Mokoailane
+            </div>
+
+            <div class="review-source">
+              Google Review
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 3 -->
+
+        <div class="col-lg-4">
+
+          <div class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p class="review-text">
+              “Affordable and Amazing service. Took great care while
+              loading and Unloading our furniture. Staff is also very
+              friendly. Would definitely use you guys in the future
+              again and most definitely recommend to family and
+              friends.”
+            </p>
+
+            <div class="review-name">
+              Charmone Botha
+            </div>
+
+            <div class="review-source">
+              Google Review
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FAQ
+  ======================================================== -->
+
+  <section class="faq-section section-padding">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <div class="section-label">
+          Frequently Asked Questions
+        </div>
+
+        <h2 class="section-title">
+          GOT QUESTIONS? <span>WE CAN HELP.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-9">
+
+          <div class="accordion" id="faqAccordion">
+
+
+            <div class="accordion-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  Do you move furniture nationwide?
+                </button>
+
+              </h2>
+
+              <div
+                id="faq1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#faqAccordion"
+              >
+
+                <div class="accordion-body">
+                  Yes. SSS Furniture Removals is based
+                  in Secunda, Mpumalanga and provides furniture
+                  removal services nationwide.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  Do you pack and wrap furniture?
+                </button>
+
+              </h2>
+
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+
+                <div class="accordion-body">
+                  Yes. We can wrap and pack your belongings as part
+                  of the moving service, helping protect your items
+                  during handling and transportation.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                >
+                  Do you handle loading and unloading?
+                </button>
+
+              </h2>
+
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+
+                <div class="accordion-body">
+                  Yes. Our service can include loading your
+                  belongings, transporting them and unloading them
+                  at your destination.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                >
+                  How do I get a quote?
+                </button>
+
+              </h2>
+
+              <div
+                id="faq4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+
+                <div class="accordion-body">
+                  Contact us on 066 431 6228 or 065 872 6032, or
+                  send us your moving details through the contact
+                  section below.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+              <h2 class="accordion-header">
+
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                >
+                  What are your business hours?
+                </button>
+
+              </h2>
+
+              <div
+                id="faq5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+
+                <div class="accordion-body">
+                  Our business hours are Monday to Friday,
+                  08:00 to 17:00.
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       CONTACT
+  ======================================================== -->
+
+  <section class="contact-section section-padding" id="contact">
+
+    <div class="container">
+
+      <div class="row g-5 align-items-start">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="col-lg-5">
+
+          <div class="section-label">
+            Get In Touch
+          </div>
+
+          <h2 class="section-title">
+            LET'S TALK ABOUT<br>
+            <span>YOUR MOVE.</span>
+          </h2>
+
+          <p class="section-text">
+            Tell us what you need moved and where you're moving to.
+            Our team will be happy to discuss your requirements and
+            provide a quote.
+          </p>
+
+
+          <div class="contact-info-card mt-4">
+
+
+            <!-- PHONE 1 -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Phone
+                </h4>
+
+                <a href="tel:+27664316228">
+                  066 431 6228
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- PHONE 2 -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-phone-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Phone
+                </h4>
+
+                <a href="tel:+27658726032">
+                  065 872 6032
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Email
+                </h4>
+
+                <a href="mailto:sssmovers.countrywide@gmail.com">
+                  sssmovers.countrywide@gmail.com.
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Address
+                </h4>
+
+                <p>
+                  Detroit Crescent, Ext 53,<br>
+                  Secunda, South Africa
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- HOURS -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-clock-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Business Hours
+                </h4>
+
+                <p>
+                  Monday – Friday<br>
+                  08:00 – 17:00
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- SERVICE AREA -->
+
+            <div class="contact-info-item">
+
+              <div class="contact-icon">
+                <i class="bi bi-truck-front-fill"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Service Area
+                </h4>
+
+                <p>
+                  Secunda, Mpumalanga & Nationwide
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="col-lg-7">
+
+          <div class="contact-form">
+
+            <h3>
+              Request A Free Quote
+            </h3>
+
+            <form action="https://formspree.io/f/xjyvaqky" method="POST">
+
+              <input type="hidden" name="subject" value="Furniture Removal Quote Request - {{ name }}">
+
+              <div class="row g-3">
+
+
+                <div class="col-md-6">
+
+                  <label class="form-label">
+                    Your Name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <label class="form-label">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your phone number"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="col-12">
+
+                  <label class="form-label">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Your email address"
+                  >
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <label class="form-label">
+                    Moving From
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="movingFrom"
+                    name="movingFrom"
+                    placeholder="Current location"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <label class="form-label">
+                    Moving To
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="movingTo"
+                    name="movingTo"
+                    placeholder="Destination"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="col-12">
+
+                  <label class="form-label">
+                    What Do You Need Moved?
+                  </label>
+
+                  <select
+                    class="form-select"
+                    id="moveType"
+                    name="moveType"
+                    required
+                  >
+
+                    <option value="" selected disabled>
+                      Select an option
+                    </option>
+
+                    <option>
+                      Household Furniture
+                    </option>
+
+                    <option>
+                      Office Furniture
+                    </option>
+
+                    <option>
+                      Full Household Move
+                    </option>
+
+                    <option>
+                      Furniture Only
+                    </option>
+
+                    <option>
+                      Packing & Wrapping
+                    </option>
+
+                    <option>
+                      Other
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="col-12">
+
+                  <label class="form-label">
+                    Tell Us About Your Move
+                  </label>
+
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Please tell us about the items you need moved, preferred moving date, number of rooms, etc."
+                  ></textarea>
+
+                </div>
+
+
+                <div class="col-12">
+
+                  <button
+                    type="submit"
+                    class="btn-main w-100"
+                  >
+
+                    <i class="bi bi-send-fill me-2"></i>
+
+                    Request My Quote
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="row g-5">
+
+
+        <!-- BRAND -->
+
+        <div class="col-lg-5">
+
+          <div class="footer-brand">
+            SSS <span>FURNITURE</span>
+          </div>
+
+          <div style="
+            color:var(--yellow);
+            font-size:11px;
+            font-weight:800;
+            letter-spacing:1.5px;
+            margin-top:5px;
+          ">
+            REMOVALS
+          </div>
+
+          <p class="footer-description">
+            Professional furniture removals based in Secunda,
+            Mpumalanga. We wrap, pack, move and unload with care,
+            providing moving services nationwide.
+          </p>
+
+
+          <div class="footer-buttons">
+
+            <a
+              href="tel:+27664316228"
+              class="footer-btn footer-btn-call"
+            >
+              <i class="bi bi-telephone-fill"></i>
+              Call 066 431 6228
+            </a>
+
+            <a
+              href="mailto:sssmovers.countrywide@gmail.com"
+              class="footer-btn footer-btn-email"
+            >
+              <i class="bi bi-envelope-fill"></i>
+              Email Us
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="col-sm-6 col-lg-3">
+
+          <div class="footer-heading">
+            Quick Links
+          </div>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#home">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#about">
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a href="#services">
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a href="#reviews">
+                Customer Reviews
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                Contact Us
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT DETAILS -->
+
+        <div class="col-sm-6 col-lg-4">
+
+          <div class="footer-heading">
+            Contact Details
+          </div>
+
+
+          <div class="footer-contact-item">
+
+            <i class="bi bi-telephone-fill"></i>
+
+            <a href="tel:+27664316228">
+              066 431 6228
+            </a>
+
+          </div>
+
+
+          <div class="footer-contact-item">
+
+            <i class="bi bi-phone-fill"></i>
+
+            <a href="tel:+27658726032">
+              065 872 6032
+            </a>
+
+          </div>
+
+
+          <div class="footer-contact-item">
+
+            <i class="bi bi-envelope-fill"></i>
+
+            <a href="mailto:sssmovers.countrywide@gmail.com">
+              sssmovers.countrywide@gmail.com
+            </a>
+
+          </div>
+
+
+          <div class="footer-contact-item">
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+            <span>
+              Detroit Crescent, Ext 53,<br>
+              Secunda, South Africa
+            </span>
+
+          </div>
+
+
+          <div class="footer-contact-item">
+
+            <i class="bi bi-clock-fill"></i>
+
+            <span>
+              Monday – Friday<br>
+              08:00 – 17:00
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        © 2026 SSS Furniture Removals.
+        All Rights Reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       FLOATING CALL BUTTON
+  ======================================================== -->
+
+  <a
+    href="tel:+27664316228"
+    class="floating-call"
+    aria-label="Call SSS Countrywide Furniture Removals"
+  >
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+
+
+  <!-- =======================================================
+       BOOTSTRAP JAVASCRIPT
+  ======================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- =======================================================
+       WEBSITE JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(
+      '#mainNavbar .nav-link'
+    ).forEach(function(link) {
+
+      link.addEventListener('click', function() {
+
+        const navbar =
+          document.getElementById('mainNavbar');
+
+        if (navbar.classList.contains('show')) {
+
+          const bsCollapse =
+            bootstrap.Collapse.getInstance(navbar);
+
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+
+        }
+
+      });
+
+    });
+
+
+  </script>
+
+</body>
+</html>
