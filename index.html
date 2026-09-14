@@ -1092,7 +1092,7 @@
       }
 
       .hero-content {
-        padding: 110px 0 90px;
+        padding: 110px 0 100px;
       }
 
       .about-badge {
@@ -1111,42 +1111,113 @@
         padding: 65px 0;
       }
 
+      /* -------------------------
+         MOBILE HERO
+      ------------------------- */
+
       .hero {
-        min-height: 680px;
-        background-position: 65% center;
+        min-height: 720px;
+        align-items: flex-start;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(7, 21, 44, 0.88) 0%,
+            rgba(7, 21, 44, 0.70) 55%,
+            rgba(7, 21, 44, 0.48) 100%
+          ),
+          url('img1.jpeg') 62% center / cover no-repeat;
       }
 
       .hero-content {
-        padding: 100px 0 100px;
+        width: 100%;
+        padding: 45px 0 135px;
+      }
+
+      .hero-label {
+        font-size: 12px;
+        letter-spacing: 1.7px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+        padding-left: 10px;
+        border-left-width: 4px;
+        max-width: 230px;
       }
 
       .hero h1 {
-        font-size: 43px;
+        font-size: 40px;
+        line-height: 0.98;
+        margin-bottom: 22px;
+        max-width: 330px;
       }
 
       .hero-description {
+        max-width: 335px;
         font-size: 14px;
-        line-height: 1.7;
+        line-height: 1.65;
+        margin-bottom: 24px;
       }
 
+      /* -------------------------
+         MOBILE BUTTONS
+      ------------------------- */
+
       .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
       }
 
       .btn-main,
       .btn-outline-main {
+        flex: 1;
+        min-height: 58px;
+        padding: 12px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        font-size: 13px;
+        line-height: 1.25;
       }
 
+      /* -------------------------
+         MOBILE SERVICE STRIP
+      ------------------------- */
+
       .hero-bottom {
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 13px 0;
+        background: rgba(11, 30, 61, 0.96);
+        border-top: 2px solid rgba(255, 193, 7, 0.65);
       }
 
       .hero-bottom-inner {
-        font-size: 10px;
-        gap: 8px 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 5px;
+        font-size: 9px;
+        line-height: 1.25;
+        letter-spacing: 0.7px;
       }
+
+      .hero-bottom-inner div {
+        text-align: center;
+      }
+
+      /* Hide the bullet separators on mobile */
+      .hero-bottom-inner > div:nth-child(even) {
+        display: none;
+      }
+
+      /* -------------------------
+         OTHER MOBILE SECTIONS
+         UNCHANGED IN DESIGN
+      ------------------------- */
 
       .about-image {
         height: 380px;
@@ -1193,20 +1264,38 @@
         font-size: 22px;
       }
 
+      .hero {
+        min-height: 700px;
+        background-position: 64% center;
+      }
+
+      .hero-content {
+        padding-top: 40px;
+        padding-bottom: 125px;
+      }
+
       .hero h1 {
-        font-size: 37px;
+        font-size: 36px;
+      }
+
+      .hero-description {
+        font-size: 13.5px;
+      }
+
+      .btn-main,
+      .btn-outline-main {
+        font-size: 12px;
+        min-height: 55px;
+        padding: 10px 8px;
+      }
+
+      .hero-bottom-inner {
+        font-size: 8.5px;
+        gap: 7px 4px;
       }
 
       .section-title {
         font-size: 29px;
-      }
-
-      .hero-bottom-inner {
-        display: block;
-      }
-
-      .hero-bottom-inner div {
-        margin-bottom: 5px;
       }
 
     }
