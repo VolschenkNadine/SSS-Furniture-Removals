@@ -22,10 +22,8 @@
     rel="stylesheet"
   >
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  >
+  <!-- Modern Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
@@ -80,6 +78,145 @@
     }
 
     /* =========================================================
+       MODERN ICON SYSTEM
+    ========================================================= */
+
+    [data-lucide] {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .brand-truck [data-lucide] {
+      width: 32px;
+      height: 32px;
+      stroke-width: 1.8;
+    }
+
+    .professional-dropdown .nav-link [data-lucide] {
+      width: 17px;
+      height: 17px;
+      stroke-width: 2;
+      vertical-align: -3px;
+    }
+
+    .hero-buttons [data-lucide] {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2.2;
+    }
+
+    .about-list [data-lucide] {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--yellow);
+      stroke-width: 2.2;
+      margin-top: 1px;
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 18px;
+      transition: 0.3s ease;
+    }
+
+    .service-icon [data-lucide] {
+      width: 27px;
+      height: 27px;
+      stroke-width: 1.8;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--yellow);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .why-icon {
+      color: var(--yellow);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .why-icon [data-lucide] {
+      width: 34px;
+      height: 34px;
+      stroke-width: 1.7;
+    }
+
+    .highlight-list [data-lucide] {
+      width: 17px;
+      height: 17px;
+      color: var(--yellow);
+      margin-right: 6px;
+      vertical-align: -3px;
+      stroke-width: 2.2;
+    }
+
+    /* MODERN CONTACT ICONS */
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 193, 7, 0.10);
+      border: 1px solid rgba(255, 193, 7, 0.55);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    .contact-icon [data-lucide] {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1.9;
+    }
+
+    .contact-info-item:hover .contact-icon {
+      background: var(--yellow);
+      color: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(255, 193, 7, 0.22);
+    }
+
+    .footer-contact-item [data-lucide] {
+      width: 17px;
+      height: 17px;
+      color: var(--white);
+      flex-shrink: 0;
+      stroke-width: 1.8;
+      margin-top: 2px;
+    }
+
+    .footer-btn [data-lucide] {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2;
+    }
+
+    .floating-call [data-lucide] {
+      width: 25px;
+      height: 25px;
+      stroke-width: 1.9;
+    }
+
+    /* =========================================================
        NAVBAR
     ========================================================= */
 
@@ -93,20 +230,28 @@
     .brand-area {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
+    /* MODERN NAVBAR TRUCK */
+
     .brand-truck {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      background: var(--yellow);
-      color: var(--navy);
+      width: 44px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 27px;
+      color: var(--yellow);
       flex-shrink: 0;
+      border-right: 1px solid rgba(255, 193, 7, 0.45);
+      padding-right: 14px;
+      box-sizing: content-box;
+    }
+
+    .brand-truck i {
+      line-height: 1;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.18));
     }
 
     .brand-text {
@@ -352,6 +497,64 @@
     }
 
     /* =========================================================
+       SCROLL TRANSITIONS
+    ========================================================= */
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(55px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-reveal-small {
+      opacity: 0;
+      transform: translateY(40px) scale(0.97);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal-small.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Staggered card timing */
+
+    .scroll-stagger:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    .scroll-stagger:nth-child(2) {
+      transition-delay: 0.12s;
+    }
+
+    .scroll-stagger:nth-child(3) {
+      transition-delay: 0.19s;
+    }
+
+    .scroll-stagger:nth-child(4) {
+      transition-delay: 0.26s;
+    }
+
+    .scroll-stagger:nth-child(5) {
+      transition-delay: 0.33s;
+    }
+
+    .scroll-stagger:nth-child(6) {
+      transition-delay: 0.40s;
+    }
+
+    /* =========================================================
        ABOUT
     ========================================================= */
 
@@ -415,11 +618,6 @@
       color: var(--navy);
     }
 
-    .about-list i {
-      color: var(--yellow);
-      font-size: 20px;
-    }
-
     /* =========================================================
        SERVICES
     ========================================================= */
@@ -454,19 +652,6 @@
 
     .service-content {
       padding: 25px;
-    }
-
-    .service-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 7px;
-      background: var(--navy);
-      color: var(--yellow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-      margin-bottom: 18px;
     }
 
     .service-content h3 {
@@ -514,12 +699,6 @@
       transform: translateY(-5px);
       border-color: var(--yellow);
       background: rgba(255,255,255,0.07);
-    }
-
-    .why-icon {
-      color: var(--yellow);
-      font-size: 35px;
-      margin-bottom: 15px;
     }
 
     .why-card h3 {
@@ -636,51 +815,6 @@
     .highlight-list li {
       font-weight: 700;
       color: var(--white);
-    }
-
-    .highlight-list i {
-      color: var(--yellow);
-      margin-right: 6px;
-    }
-
-    /* =========================================================
-       GALLERY
-    ========================================================= */
-
-    .gallery-section {
-      background: var(--white);
-    }
-
-    .gallery-item {
-      height: 280px;
-      overflow: hidden;
-      border-radius: 8px;
-      position: relative;
-      box-shadow: 0 8px 20px rgba(11,30,61,0.10);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.08);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: auto 0 0 0;
-      padding: 20px;
-      background: linear-gradient(
-        transparent,
-        rgba(7,21,44,0.9)
-      );
-      color: var(--white);
-      font-weight: 800;
-      text-transform: uppercase;
     }
 
     /* =========================================================
@@ -855,19 +989,6 @@
       margin-bottom: 0;
     }
 
-    .contact-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 6px;
-      background: var(--yellow);
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-      flex-shrink: 0;
-    }
-
     .contact-info-item h4 {
       color: var(--yellow);
       font-size: 13px;
@@ -989,12 +1110,6 @@
       margin-bottom: 13px;
     }
 
-    .footer-contact-item i {
-      color: var(--white);
-      font-size: 17px;
-      flex-shrink: 0;
-    }
-
     .footer-contact-item a,
     .footer-contact-item span {
       color: rgba(255,255,255,0.75);
@@ -1046,13 +1161,24 @@
       color: var(--navy);
     }
 
+    /* COPYRIGHT */
+
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.1);
       margin-top: 45px;
-      padding-top: 20px;
+      margin-bottom: -25px;
+      padding: 20px 0 25px;
       text-align: center;
-      color: rgba(255,255,255,0.5);
+      color: #FFFFFF !important;
+      background: var(--dark);
       font-size: 11px;
+      line-height: 1.8;
+      font-weight: 600;
+      display: block;
+      width: 100%;
+      clear: both;
+      opacity: 1 !important;
+      transform: none !important;
     }
 
     /* =========================================================
@@ -1071,7 +1197,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.25);
       z-index: 9998;
       transition: 0.25s ease;
@@ -1114,6 +1239,34 @@
       }
 
       /* -------------------------
+         MOBILE NAVBAR
+      ------------------------- */
+
+      .brand-area {
+        gap: 11px;
+      }
+
+      .brand-truck {
+        width: 38px;
+        height: 38px;
+        padding-right: 11px;
+      }
+
+      .brand-truck [data-lucide] {
+        width: 28px;
+        height: 28px;
+      }
+
+      .brand-main {
+        font-size: 15px;
+      }
+
+      .brand-sub {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+      }
+
+      /* -------------------------
          MOBILE HERO
       ------------------------- */
 
@@ -1133,7 +1286,7 @@
 
       .hero-content {
         width: 100%;
-        padding: 45px 0 135px;
+        padding: 105px 0 135px;
       }
 
       .hero-label {
@@ -1211,14 +1364,12 @@
         text-align: center;
       }
 
-      /* Hide the bullet separators on mobile */
       .hero-bottom-inner > div:nth-child(even) {
         display: none;
       }
 
       /* -------------------------
          OTHER MOBILE SECTIONS
-         UNCHANGED IN DESIGN
       ------------------------- */
 
       .about-image {
@@ -1238,10 +1389,6 @@
         padding: 30px 25px;
       }
 
-      .gallery-item {
-        height: 230px;
-      }
-
       .contact-form {
         padding: 25px 20px;
         margin-top: 35px;
@@ -1249,6 +1396,28 @@
 
       .footer-buttons {
         max-width: 300px;
+      }
+
+      .contact-icon {
+        width: 46px;
+        height: 46px;
+      }
+
+      .contact-icon [data-lucide] {
+        width: 19px;
+        height: 19px;
+      }
+
+      /* Strong but smooth mobile reveal */
+
+      .scroll-reveal {
+        transform: translateY(35px);
+        transition-duration: 0.7s;
+      }
+
+      .scroll-reveal-small {
+        transform: translateY(30px) scale(0.98);
+        transition-duration: 0.65s;
       }
 
     }
@@ -1264,9 +1433,14 @@
       }
 
       .brand-truck {
-        width: 42px;
-        height: 42px;
-        font-size: 22px;
+        width: 34px;
+        height: 36px;
+        padding-right: 9px;
+      }
+
+      .brand-truck [data-lucide] {
+        width: 25px;
+        height: 25px;
       }
 
       .hero {
@@ -1275,7 +1449,7 @@
       }
 
       .hero-content {
-        padding-top: 40px;
+        padding-top: 95px;
         padding-bottom: 125px;
       }
 
@@ -1305,6 +1479,33 @@
 
     }
 
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .scroll-reveal,
+      .scroll-reveal-small {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -1323,7 +1524,7 @@
         <div class="brand-area">
 
           <div class="brand-truck">
-            <i class="bi bi-truck"></i>
+            <i data-lucide="truck"></i>
           </div>
 
           <div class="brand-text">
@@ -1363,36 +1564,36 @@
 
           <li class="nav-item">
             <a class="nav-link" href="#home">
-              <i class="bi bi-house-door-fill me-2"></i>
-              Home
+              <i data-lucide="house"></i>
+              <span class="ms-2">Home</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#about">
-              <i class="bi bi-building-fill me-2"></i>
-              About Us
+              <i data-lucide="building-2"></i>
+              <span class="ms-2">About Us</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#services">
-              <i class="bi bi-box-seam-fill me-2"></i>
-              Services
+              <i data-lucide="package"></i>
+              <span class="ms-2">Services</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#reviews">
-              <i class="bi bi-star-fill me-2"></i>
-              Reviews
+              <i data-lucide="star"></i>
+              <span class="ms-2">Reviews</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#contact">
-              <i class="bi bi-telephone-fill me-2"></i>
-              Contact Us
+              <i data-lucide="phone"></i>
+              <span class="ms-2">Contact Us</span>
             </a>
           </li>
 
@@ -1437,16 +1638,16 @@
             href="#contact"
             class="btn-main"
           >
-            <i class="bi bi-chat-square-text-fill me-2"></i>
-            Get a Free Quote
+            <i data-lucide="message-square"></i>
+            <span class="ms-2">Get a Free Quote</span>
           </a>
 
           <a
             href="tel:+27664316228"
             class="btn-outline-main"
           >
-            <i class="bi bi-telephone-fill me-2"></i>
-            Call Now
+            <i data-lucide="phone"></i>
+            <span class="ms-2">Call Now</span>
           </a>
 
         </div>
@@ -1505,7 +1706,7 @@
 
         <div class="col-lg-6">
 
-          <div class="about-image-wrap">
+          <div class="about-image-wrap scroll-reveal">
 
             <img
               src="img2.jpeg"
@@ -1529,7 +1730,7 @@
         </div>
 
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 scroll-reveal">
 
           <div class="section-label">
             About SSS Furniture Removals
@@ -1574,22 +1775,22 @@
           <ul class="about-list">
 
             <li>
-              <i class="bi bi-check-circle-fill"></i>
+              <i data-lucide="circle-check"></i>
               Professional wrapping and packing
             </li>
 
             <li>
-              <i class="bi bi-check-circle-fill"></i>
+              <i data-lucide="circle-check"></i>
               Careful loading and unloading
             </li>
 
             <li>
-              <i class="bi bi-check-circle-fill"></i>
+              <i data-lucide="circle-check"></i>
               Local and nationwide moves
             </li>
 
             <li>
-              <i class="bi bi-check-circle-fill"></i>
+              <i data-lucide="circle-check"></i>
               Friendly and professional service
             </li>
 
@@ -1612,7 +1813,7 @@
 
     <div class="container">
 
-      <div class="text-center mb-5">
+      <div class="text-center mb-5 scroll-reveal">
 
         <div class="section-label">
           What We Do
@@ -1636,7 +1837,7 @@
 
         <!-- SERVICE 1 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1649,7 +1850,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-house-door-fill"></i>
+                <i data-lucide="house"></i>
               </div>
 
               <h3>
@@ -1671,7 +1872,7 @@
 
         <!-- SERVICE 2 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1684,7 +1885,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-building"></i>
+                <i data-lucide="building-2"></i>
               </div>
 
               <h3>
@@ -1706,7 +1907,7 @@
 
         <!-- SERVICE 3 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1719,7 +1920,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-signpost-2-fill"></i>
+                <i data-lucide="route"></i>
               </div>
 
               <h3>
@@ -1740,7 +1941,7 @@
 
         <!-- SERVICE 4 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1753,7 +1954,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-box-seam-fill"></i>
+                <i data-lucide="package"></i>
               </div>
 
               <h3>
@@ -1775,7 +1976,7 @@
 
         <!-- SERVICE 5 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1788,7 +1989,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-box2-heart-fill"></i>
+                <i data-lucide="package-open"></i>
               </div>
 
               <h3>
@@ -1810,7 +2011,7 @@
 
         <!-- SERVICE 6 -->
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="service-card">
 
@@ -1823,7 +2024,7 @@
             <div class="service-content">
 
               <div class="service-icon">
-                <i class="bi bi-truck"></i>
+                <i data-lucide="truck"></i>
               </div>
 
               <h3>
@@ -1857,7 +2058,7 @@
 
     <div class="container">
 
-      <div class="row align-items-center mb-5">
+      <div class="row align-items-center mb-5 scroll-reveal">
 
         <div class="col-lg-6">
 
@@ -1889,12 +2090,12 @@
       <div class="row g-4">
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="why-card">
 
             <div class="why-icon">
-              <i class="bi bi-shield-check"></i>
+              <i data-lucide="shield-check"></i>
             </div>
 
             <h3>
@@ -1911,12 +2112,12 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="why-card">
 
             <div class="why-icon">
-              <i class="bi bi-clock-history"></i>
+              <i data-lucide="clock-3"></i>
             </div>
 
             <h3>
@@ -1933,12 +2134,12 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="why-card">
 
             <div class="why-icon">
-              <i class="bi bi-people-fill"></i>
+              <i data-lucide="users"></i>
             </div>
 
             <h3>
@@ -1955,12 +2156,12 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="why-card">
 
             <div class="why-icon">
-              <i class="bi bi-geo-alt-fill"></i>
+              <i data-lucide="map-pin"></i>
             </div>
 
             <h3>
@@ -1991,7 +2192,7 @@
 
     <div class="container">
 
-      <div class="text-center mb-5">
+      <div class="text-center mb-5 scroll-reveal">
 
         <div class="section-label">
           Our Process
@@ -2012,7 +2213,7 @@
       <div class="row g-4">
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="process-card">
 
@@ -2034,7 +2235,7 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="process-card">
 
@@ -2056,7 +2257,7 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="process-card">
 
@@ -2078,7 +2279,7 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-3 scroll-reveal-small scroll-stagger">
 
           <div class="process-card">
 
@@ -2114,15 +2315,14 @@
 
     <div class="container">
 
-      <div class="highlight-box">
+      <div class="highlight-box scroll-reveal">
 
         <div class="section-label">
           Complete Moving Assistance
         </div>
 
         <h2>
-          WE WRAP. WE PACK.<br>
-          <span>WE MOVE.</span>
+          WE WRAP. WE PACK. <span>WE MOVE.</span>
         </h2>
 
         <p>
@@ -2135,169 +2335,31 @@
         <ul class="highlight-list">
 
           <li>
-            <i class="bi bi-check-circle-fill"></i>
+            <i data-lucide="circle-check"></i>
             Wrapping
           </li>
 
           <li>
-            <i class="bi bi-check-circle-fill"></i>
+            <i data-lucide="circle-check"></i>
             Packing
           </li>
 
           <li>
-            <i class="bi bi-check-circle-fill"></i>
+            <i data-lucide="circle-check"></i>
             Loading
           </li>
 
           <li>
-            <i class="bi bi-check-circle-fill"></i>
+            <i data-lucide="circle-check"></i>
             Transport
           </li>
 
           <li>
-            <i class="bi bi-check-circle-fill"></i>
+            <i data-lucide="circle-check"></i>
             Unloading
           </li>
 
         </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       GALLERY
-  ======================================================== -->
-
-  <section class="gallery-section section-padding">
-
-    <div class="container">
-
-      <div class="text-center mb-5">
-
-        <div class="section-label">
-          Our Work
-        </div>
-
-        <h2 class="section-title">
-          MOVING <span>MADE EASY.</span>
-        </h2>
-
-      </div>
-
-
-      <div class="row g-4">
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img3.jpeg"
-              alt="Furniture removal"
-            >
-
-            <div class="gallery-overlay">
-              Household Moves
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img4.jpeg"
-              alt="Office relocation"
-            >
-
-            <div class="gallery-overlay">
-              Office Relocations
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img5.jpeg"
-              alt="Nationwide moving"
-            >
-
-            <div class="gallery-overlay">
-              Nationwide Moving
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img6.jpeg"
-              alt="Furniture transport"
-            >
-
-            <div class="gallery-overlay">
-              Furniture Transport
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img7.jpeg"
-              alt="Packing service"
-            >
-
-            <div class="gallery-overlay">
-              Packing & Wrapping
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-
-          <div class="gallery-item">
-
-            <img
-              src="img8.jpeg"
-              alt="Moving service"
-            >
-
-            <div class="gallery-overlay">
-              Complete Relocations
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
 
@@ -2314,7 +2376,7 @@
 
     <div class="container">
 
-      <div class="cta-content">
+      <div class="cta-content scroll-reveal">
 
         <div class="section-label">
           Ready To Move?
@@ -2336,16 +2398,16 @@
             href="#contact"
             class="btn-main"
           >
-            <i class="bi bi-chat-square-text-fill me-2"></i>
-            Get A Free Quote
+            <i data-lucide="message-square"></i>
+            <span class="ms-2">Get A Free Quote</span>
           </a>
 
           <a
             href="tel:+27664316228"
             class="btn-outline-main"
           >
-            <i class="bi bi-telephone-fill me-2"></i>
-            066 431 6228
+            <i data-lucide="phone"></i>
+            <span class="ms-2">066 431 6228</span>
           </a>
 
         </div>
@@ -2365,7 +2427,7 @@
 
     <div class="container">
 
-      <div class="text-center mb-5">
+      <div class="text-center mb-5 scroll-reveal">
 
         <div class="section-label">
           Customer Reviews
@@ -2388,7 +2450,7 @@
 
         <!-- REVIEW 1 -->
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="review-card">
 
@@ -2418,7 +2480,7 @@
 
         <!-- REVIEW 2 -->
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="review-card">
 
@@ -2447,7 +2509,7 @@
 
         <!-- REVIEW 3 -->
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 scroll-reveal-small scroll-stagger">
 
           <div class="review-card">
 
@@ -2490,7 +2552,7 @@
 
     <div class="container">
 
-      <div class="text-center mb-5">
+      <div class="text-center mb-5 scroll-reveal">
 
         <div class="section-label">
           Frequently Asked Questions
@@ -2510,7 +2572,7 @@
           <div class="accordion" id="faqAccordion">
 
 
-            <div class="accordion-item">
+            <div class="accordion-item scroll-reveal-small">
 
               <h2 class="accordion-header">
 
@@ -2542,7 +2604,7 @@
             </div>
 
 
-            <div class="accordion-item">
+            <div class="accordion-item scroll-reveal-small">
 
               <h2 class="accordion-header">
 
@@ -2574,7 +2636,7 @@
             </div>
 
 
-            <div class="accordion-item">
+            <div class="accordion-item scroll-reveal-small">
 
               <h2 class="accordion-header">
 
@@ -2606,7 +2668,7 @@
             </div>
 
 
-            <div class="accordion-item">
+            <div class="accordion-item scroll-reveal-small">
 
               <h2 class="accordion-header">
 
@@ -2638,7 +2700,7 @@
             </div>
 
 
-            <div class="accordion-item">
+            <div class="accordion-item scroll-reveal-small">
 
               <h2 class="accordion-header">
 
@@ -2693,7 +2755,7 @@
 
         <!-- CONTACT INFORMATION -->
 
-        <div class="col-lg-5">
+        <div class="col-lg-5 scroll-reveal">
 
           <div class="section-label">
             Get In Touch
@@ -2713,13 +2775,10 @@
 
           <div class="contact-info-card mt-4">
 
-
-            <!-- PHONE 1 -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-telephone-fill"></i>
+                <i data-lucide="phone"></i>
               </div>
 
               <div>
@@ -2737,12 +2796,10 @@
             </div>
 
 
-            <!-- PHONE 2 -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-phone-fill"></i>
+                <i data-lucide="smartphone"></i>
               </div>
 
               <div>
@@ -2760,12 +2817,10 @@
             </div>
 
 
-            <!-- EMAIL -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-envelope-fill"></i>
+                <i data-lucide="mail"></i>
               </div>
 
               <div>
@@ -2775,7 +2830,7 @@
                 </h4>
 
                 <a href="mailto:sssmovers.countrywide@gmail.com">
-                  sssmovers.countrywide@gmail.com.
+                  sssmovers.countrywide@gmail.com
                 </a>
 
               </div>
@@ -2783,12 +2838,10 @@
             </div>
 
 
-            <!-- ADDRESS -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-geo-alt-fill"></i>
+                <i data-lucide="map-pin"></i>
               </div>
 
               <div>
@@ -2807,12 +2860,10 @@
             </div>
 
 
-            <!-- HOURS -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-clock-fill"></i>
+                <i data-lucide="clock-3"></i>
               </div>
 
               <div>
@@ -2831,12 +2882,10 @@
             </div>
 
 
-            <!-- SERVICE AREA -->
-
             <div class="contact-info-item">
 
               <div class="contact-icon">
-                <i class="bi bi-truck-front-fill"></i>
+                <i data-lucide="truck"></i>
               </div>
 
               <div>
@@ -2861,7 +2910,7 @@
 
         <!-- CONTACT FORM -->
 
-        <div class="col-lg-7">
+        <div class="col-lg-7 scroll-reveal">
 
           <div class="contact-form">
 
@@ -2871,7 +2920,11 @@
 
             <form action="https://formspree.io/f/xjyvaqky" method="POST">
 
-              <input type="hidden" name="subject" value="Furniture Removal Quote Request - {{ name }}">
+              <input
+                type="hidden"
+                name="subject"
+                value="Furniture Removal Quote Request - {{ name }}"
+              >
 
               <div class="row g-3">
 
@@ -3035,9 +3088,9 @@
                     class="btn-main w-100"
                   >
 
-                    <i class="bi bi-send-fill me-2"></i>
+                    <i data-lucide="send"></i>
 
-                    Request My Quote
+                    <span class="ms-2">Request My Quote</span>
 
                   </button>
 
@@ -3069,9 +3122,7 @@
       <div class="row g-5">
 
 
-        <!-- BRAND -->
-
-        <div class="col-lg-5">
+        <div class="col-lg-5 scroll-reveal">
 
           <div class="footer-brand">
             SSS <span>FURNITURE</span>
@@ -3100,7 +3151,7 @@
               href="tel:+27664316228"
               class="footer-btn footer-btn-call"
             >
-              <i class="bi bi-telephone-fill"></i>
+              <i data-lucide="phone"></i>
               Call 066 431 6228
             </a>
 
@@ -3108,7 +3159,7 @@
               href="mailto:sssmovers.countrywide@gmail.com"
               class="footer-btn footer-btn-email"
             >
-              <i class="bi bi-envelope-fill"></i>
+              <i data-lucide="mail"></i>
               Email Us
             </a>
 
@@ -3117,9 +3168,7 @@
         </div>
 
 
-        <!-- QUICK LINKS -->
-
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-3 scroll-reveal">
 
           <div class="footer-heading">
             Quick Links
@@ -3162,9 +3211,7 @@
         </div>
 
 
-        <!-- CONTACT DETAILS -->
-
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 scroll-reveal">
 
           <div class="footer-heading">
             Contact Details
@@ -3173,7 +3220,7 @@
 
           <div class="footer-contact-item">
 
-            <i class="bi bi-telephone-fill"></i>
+            <i data-lucide="phone"></i>
 
             <a href="tel:+27664316228">
               066 431 6228
@@ -3184,7 +3231,7 @@
 
           <div class="footer-contact-item">
 
-            <i class="bi bi-phone-fill"></i>
+            <i data-lucide="smartphone"></i>
 
             <a href="tel:+27658726032">
               065 872 6032
@@ -3195,7 +3242,7 @@
 
           <div class="footer-contact-item">
 
-            <i class="bi bi-envelope-fill"></i>
+            <i data-lucide="mail"></i>
 
             <a href="mailto:sssmovers.countrywide@gmail.com">
               sssmovers.countrywide@gmail.com
@@ -3206,7 +3253,7 @@
 
           <div class="footer-contact-item">
 
-            <i class="bi bi-geo-alt-fill"></i>
+            <i data-lucide="map-pin"></i>
 
             <span>
               Detroit Crescent, Ext 53,<br>
@@ -3218,7 +3265,7 @@
 
           <div class="footer-contact-item">
 
-            <i class="bi bi-clock-fill"></i>
+            <i data-lucide="clock-3"></i>
 
             <span>
               Monday – Friday<br>
@@ -3234,8 +3281,8 @@
 
       <div class="footer-bottom">
 
-        © 2026 SSS Furniture Removals.
-        All Rights Reserved.
+        © 2026 SSS Furniture Removals. All Rights Reserved |
+        Built &amp; Developed by Nadine Volschenk
 
       </div>
 
@@ -3253,7 +3300,7 @@
     class="floating-call"
     aria-label="Call SSS Countrywide Furniture Removals"
   >
-    <i class="bi bi-telephone-fill"></i>
+    <i data-lucide="phone"></i>
   </a>
 
 
@@ -3270,7 +3317,60 @@
 
   <script>
 
-    /* Close mobile menu after clicking a link */
+    /* =======================================================
+       CREATE MODERN LUCIDE ICONS
+    ======================================================== */
+
+    lucide.createIcons();
+
+
+    /* =======================================================
+       SCROLL REVEAL ANIMATIONS
+       Works on desktop and mobile
+    ======================================================== */
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const revealElements =
+        document.querySelectorAll(
+          ".scroll-reveal, .scroll-reveal-small"
+        );
+
+      const revealObserver =
+        new IntersectionObserver(
+          function(entries, observer) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -60px 0px"
+          }
+        );
+
+      revealElements.forEach(function(element) {
+
+        revealObserver.observe(element);
+
+      });
+
+    });
+
+
+    /* =======================================================
+       CLOSE MOBILE MENU AFTER CLICKING A LINK
+    ======================================================== */
 
     document.querySelectorAll(
       '#mainNavbar .nav-link'
@@ -3295,7 +3395,6 @@
       });
 
     });
-
 
   </script>
 
