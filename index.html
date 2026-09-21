@@ -43,6 +43,8 @@
       --dark: #07152c;
       --light: #f5f7fa;
       --text: #24344d;
+      --heading: #0B1E3D;
+      --muted-heading: #30435f;
       --shadow: 0 15px 40px rgba(11, 30, 61, 0.14);
     }
 
@@ -76,6 +78,7 @@
     section {
       scroll-margin-top: 80px;
     }
+
 
     /* =========================================================
        MODERN ICON SYSTEM
@@ -165,7 +168,10 @@
       stroke-width: 2.2;
     }
 
-    /* MODERN CONTACT ICONS */
+
+    /* =========================================================
+       CONTACT ICONS
+    ========================================================= */
 
     .contact-icon {
       width: 48px;
@@ -216,6 +222,7 @@
       stroke-width: 1.9;
     }
 
+
     /* =========================================================
        NAVBAR
     ========================================================= */
@@ -232,8 +239,6 @@
       align-items: center;
       gap: 14px;
     }
-
-    /* MODERN NAVBAR TRUCK */
 
     .brand-truck {
       width: 44px;
@@ -305,6 +310,7 @@
       color: var(--navy) !important;
     }
 
+
     /* =========================================================
        HERO
     ========================================================= */
@@ -362,19 +368,20 @@
     .hero-label {
       display: inline-block;
       color: var(--yellow);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
       margin-bottom: 15px;
-      border-left: 4px solid var(--yellow);
+      border-left: 3px solid var(--yellow);
       padding-left: 12px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6vw, 78px);
-      line-height: 0.98;
-      font-weight: 900;
-      text-transform: uppercase;
+      font-size: clamp(40px, 5.5vw, 70px);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      text-transform: none;
       margin-bottom: 25px;
       max-width: 850px;
     }
@@ -415,7 +422,6 @@
       transform: translateY(-2px);
     }
 
-    /* Professional hero quote button — matches the Call Now style */
     .hero-buttons .btn-quote {
       background: transparent;
       color: var(--white);
@@ -465,14 +471,15 @@
       gap: 12px 30px;
       color: var(--white);
       font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
       text-align: center;
     }
 
     .hero-bottom-inner span {
       color: var(--yellow);
     }
+
 
     /* =========================================================
        GENERAL SECTION STYLING
@@ -484,19 +491,20 @@
 
     .section-label {
       color: var(--yellow);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
 
     .section-title {
-      color: var(--navy);
-      font-size: clamp(30px, 4vw, 48px);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.08;
+      color: var(--heading);
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: -0.02em;
+      line-height: 1.14;
       margin-bottom: 20px;
     }
 
@@ -509,6 +517,7 @@
       line-height: 1.8;
       font-size: 15px;
     }
+
 
     /* =========================================================
        SCROLL TRANSITIONS
@@ -542,8 +551,6 @@
       transform: translateY(0) scale(1);
     }
 
-    /* Staggered card timing */
-
     .scroll-stagger:nth-child(1) {
       transition-delay: 0.05s;
     }
@@ -568,69 +575,108 @@
       transition-delay: 0.40s;
     }
 
+
     /* =========================================================
-       ABOUT
+       ABOUT — WHITE BACKGROUND
     ========================================================= */
 
     .about-section {
-      background: var(--white);
-    }
-
-    .about-image-wrap {
       position: relative;
+      background: var(--white);
+      color: var(--navy);
+      overflow: hidden;
     }
 
-    .about-image {
-      width: 100%;
-      height: 520px;
-      object-fit: contain;
-      object-position: center;
-      background: #f5f7fa;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
+    .about-section .container {
+      position: relative;
+      z-index: 2;
     }
 
-    .about-badge {
-      position: absolute;
-      right: -20px;
-      bottom: 25px;
-      background: var(--navy);
-      color: var(--white);
-      padding: 22px 25px;
-      border-left: 5px solid var(--yellow);
-      box-shadow: var(--shadow);
-      max-width: 230px;
+    .about-panel {
+      background: transparent;
+      border: none;
+      border-left: none;
+      border-radius: 0;
+      padding: 10px 0;
+      box-shadow: none;
+      backdrop-filter: none;
     }
 
-    .about-badge strong {
-      display: block;
+    .about-section .section-label {
       color: var(--yellow);
-      font-size: 27px;
-      font-weight: 900;
     }
 
-    .about-badge small {
-      font-weight: 600;
-      line-height: 1.4;
+    .about-section .section-title {
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .about-section .section-title span {
+      color: var(--yellow);
+    }
+
+    .about-section .section-text {
+      color: var(--text);
+      line-height: 1.8;
     }
 
     .about-copy {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .about-list {
-      list-style: none;
+    .about-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(11, 30, 61, 0.14);
+      margin: 38px 0;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 0;
+    }
+
+    .about-feature {
       padding: 0;
-      margin: 25px 0 0;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      transition: 0.3s ease;
     }
 
-    .about-list li {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-weight: 600;
-      color: var(--navy);
+    .about-feature:hover {
+      background: transparent;
+      border: none;
+      transform: translateY(-3px);
     }
+
+    .about-feature-icon {
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+
+    .about-feature-icon [data-lucide] {
+      width: 23px;
+      height: 23px;
+      stroke-width: 2.2;
+    }
+
+    .about-feature h4 {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: none;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .about-highlight,
+    .about-list {
+      display: none;
+    }
+
 
     /* =========================================================
        SERVICES
@@ -670,9 +716,10 @@
 
     .service-content h3 {
       color: var(--navy);
-      font-size: 20px;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-size: 19px;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: -0.01em;
       margin-bottom: 10px;
     }
 
@@ -683,6 +730,7 @@
       margin: 0;
     }
 
+
     /* =========================================================
        WHY CHOOSE US
     ========================================================= */
@@ -692,8 +740,16 @@
       color: var(--white);
     }
 
+    .why-section .section-label {
+      color: var(--yellow);
+    }
+
     .why-section .section-title {
       color: var(--white);
+    }
+
+    .why-section .section-title span {
+      color: var(--yellow);
     }
 
     .why-section .section-text {
@@ -716,9 +772,11 @@
     }
 
     .why-card h3 {
-      font-size: 19px;
-      font-weight: 800;
-      text-transform: uppercase;
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
       margin-bottom: 10px;
     }
 
@@ -728,6 +786,7 @@
       line-height: 1.7;
       margin: 0;
     }
+
 
     /* =========================================================
        PROCESS
@@ -753,15 +812,16 @@
       justify-content: center;
       border-radius: 50%;
       font-size: 24px;
-      font-weight: 900;
+      font-weight: 700;
       margin: 0 auto 20px;
     }
 
     .process-card h3 {
       color: var(--navy);
       font-size: 18px;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
       margin-bottom: 10px;
     }
 
@@ -771,65 +831,144 @@
       line-height: 1.7;
     }
 
+
     /* =========================================================
-       SERVICE HIGHLIGHT
+       COMPLETE MOVING ASSISTANCE
     ========================================================= */
 
     .highlight-section {
       background: var(--light);
-    }
-
-    .highlight-box {
-      background: var(--navy);
-      border-radius: 10px;
-      padding: 50px;
-      color: var(--white);
       position: relative;
       overflow: hidden;
     }
 
-    .highlight-box::after {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      right: -100px;
-      top: -100px;
-      border: 60px solid rgba(255, 193, 7, 0.08);
-      border-radius: 50%;
+    .highlight-section .section-heading {
+      max-width: 780px;
+      margin: 0 auto 65px;
+      text-align: center;
     }
 
-    .highlight-box h2 {
-      color: var(--white);
-      font-size: clamp(30px, 4vw, 48px);
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .highlight-box h2 span {
+    .highlight-section .section-label {
       color: var(--yellow);
     }
 
-    .highlight-box p {
-      color: rgba(255,255,255,0.78);
+    .highlight-section .section-title {
+      color: var(--navy);
+    }
+
+    .highlight-section .section-title span {
+      color: var(--yellow);
+    }
+
+    .highlight-section .section-heading .section-text {
+      color: var(--text);
+      max-width: 720px;
+      margin: 0 auto;
       line-height: 1.8;
-      max-width: 750px;
     }
 
-    .highlight-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0 0;
+
+    /* =========================================================
+       MOVING PROCESS
+    ========================================================= */
+
+    .moving-process {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+    }
+
+
+    /* Connecting line */
+
+    .moving-process::before {
+      content: "";
+      position: absolute;
+      top: 31px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: rgba(11, 30, 61, 0.12);
+      z-index: 0;
+    }
+
+
+    /* Individual step */
+
+    .moving-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      background: var(--light);
+      padding: 0 12px;
+    }
+
+
+    /* Icon */
+
+    .moving-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px 25px;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy);
+      color: var(--yellow);
+
+      border-radius: 50%;
+
+      border: 5px solid var(--light);
+
+      box-shadow:
+        0 0 0 1px rgba(11, 30, 61, 0.12),
+        0 8px 20px rgba(11, 30, 61, 0.10);
+
+      transition: 0.3s ease;
     }
 
-    .highlight-list li {
-      font-weight: 700;
-      color: var(--white);
+    .moving-icon [data-lucide] {
+      width: 25px;
+      height: 25px;
+      stroke-width: 2;
     }
+
+    .moving-step:hover .moving-icon {
+      transform: translateY(-5px);
+      background: var(--yellow);
+      color: var(--navy);
+      box-shadow:
+        0 0 0 1px rgba(255, 193, 7, 0.35),
+        0 10px 25px rgba(11, 30, 61, 0.14);
+    }
+
+
+    /* Step text */
+
+    .moving-step h3 {
+      margin: 0 0 10px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+      font-weight: 600;
+
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .moving-step p {
+      margin: 0;
+
+      color: #64748b;
+
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
 
     /* =========================================================
        CTA
@@ -855,10 +994,17 @@
       margin: auto;
     }
 
+    .cta-content .section-label {
+      color: var(--yellow);
+    }
+
     .cta-content h2 {
-      font-size: clamp(38px, 5vw, 65px);
-      font-weight: 900;
-      text-transform: uppercase;
+      color: var(--white);
+      font-size: clamp(34px, 4.5vw, 58px);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
       margin-bottom: 18px;
     }
 
@@ -871,6 +1017,29 @@
       line-height: 1.8;
       margin-bottom: 28px;
     }
+
+
+    /* ONLY CHANGE: CTA QUOTE BUTTON */
+
+    .cta-section .btn-quote {
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--white);
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: 800;
+      transition: 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-section .btn-quote:hover {
+      background: transparent;
+      color: var(--white);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
 
     /* =========================================================
        REVIEWS
@@ -907,8 +1076,8 @@
 
     .review-name {
       color: var(--navy);
-      font-weight: 900;
-      text-transform: uppercase;
+      font-weight: 700;
+      text-transform: none;
       font-size: 13px;
     }
 
@@ -917,6 +1086,7 @@
       font-size: 11px;
       margin-top: 4px;
     }
+
 
     /* =========================================================
        FAQ
@@ -935,7 +1105,7 @@
     }
 
     .accordion-button {
-      font-weight: 800;
+      font-weight: 600;
       color: var(--navy);
       background: var(--white);
       padding: 20px;
@@ -961,6 +1131,7 @@
       font-size: 14px;
     }
 
+
     /* =========================================================
        CONTACT
     ========================================================= */
@@ -976,8 +1147,16 @@
       color: var(--white);
     }
 
+    .contact-section .section-label {
+      color: var(--yellow);
+    }
+
     .contact-section .section-title {
       color: var(--white);
+    }
+
+    .contact-section .section-title span {
+      color: var(--yellow);
     }
 
     .contact-section .section-text {
@@ -1003,11 +1182,27 @@
       margin-bottom: 0;
     }
 
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 193, 7, 0.10);
+      border: 1px solid rgba(255, 193, 7, 0.55);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+
     .contact-info-item h4 {
       color: var(--yellow);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
       margin-bottom: 5px;
     }
 
@@ -1032,17 +1227,18 @@
 
     .contact-form h3 {
       color: var(--navy);
-      font-size: 24px;
-      font-weight: 900;
-      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: -0.01em;
       margin-bottom: 25px;
     }
 
     .form-label {
       color: var(--navy);
       font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 700;
+      text-transform: none;
     }
 
     .form-control,
@@ -1058,6 +1254,7 @@
       border-color: var(--yellow);
       box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.15);
     }
+
 
     /* =========================================================
        FOOTER
@@ -1091,10 +1288,10 @@
 
     .footer-heading {
       color: var(--yellow);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0.5px;
       margin-bottom: 18px;
     }
 
@@ -1175,6 +1372,7 @@
       color: var(--navy);
     }
 
+
     /* COPYRIGHT */
 
     .footer-bottom {
@@ -1194,6 +1392,7 @@
       opacity: 1 !important;
       transform: none !important;
     }
+
 
     /* =========================================================
        FLOATING CALL BUTTON
@@ -1222,6 +1421,7 @@
       color: var(--navy);
     }
 
+
     /* =========================================================
        MOBILE
     ========================================================= */
@@ -1246,11 +1446,13 @@
 
     }
 
+
     @media (max-width: 767px) {
 
       .section-padding {
         padding: 65px 0;
       }
+
 
       /* -------------------------
          MOBILE NAVBAR
@@ -1280,6 +1482,7 @@
         letter-spacing: 1.5px;
       }
 
+
       /* -------------------------
          MOBILE HERO
       ------------------------- */
@@ -1304,18 +1507,20 @@
       }
 
       .hero-label {
-        font-size: 12px;
-        letter-spacing: 1.7px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
         line-height: 1.5;
         margin-bottom: 14px;
         padding-left: 10px;
-        border-left-width: 4px;
+        border-left-width: 3px;
         max-width: 230px;
       }
 
       .hero h1 {
-        font-size: 40px;
-        line-height: 0.98;
+        font-size: 36px;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
         margin-bottom: 22px;
         max-width: 330px;
       }
@@ -1326,6 +1531,31 @@
         line-height: 1.65;
         margin-bottom: 24px;
       }
+
+
+      /* -------------------------
+         MOBILE SECTION HEADINGS
+      ------------------------- */
+
+      .section-label {
+        font-size: 11px;
+        letter-spacing: 1.3px;
+        margin-bottom: 9px;
+      }
+
+      .section-title {
+        font-size: 28px;
+        line-height: 1.16;
+        font-weight: 700;
+        letter-spacing: -0.018em;
+        margin-bottom: 18px;
+      }
+
+      .about-section .section-title {
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+
 
       /* -------------------------
          MOBILE BUTTONS
@@ -1350,6 +1580,7 @@
         font-size: 13px;
         line-height: 1.25;
       }
+
 
       /* -------------------------
          MOBILE SERVICE STRIP
@@ -1382,47 +1613,188 @@
         display: none;
       }
 
+
       /* -------------------------
-         OTHER MOBILE SECTIONS
+         MOBILE ABOUT
       ------------------------- */
 
-      .about-image {
-        height: 380px;
-        object-fit: contain;
-        object-position: center;
-        background: #f5f7fa;
+      .about-section {
+        background: var(--white);
+        color: var(--navy);
+      }
+
+      .about-panel {
+        padding: 5px 0;
+      }
+
+      .about-section .section-title {
         margin-bottom: 18px;
+        color: var(--navy);
       }
 
-      /* Keep the SECUNDA badge below the photo on mobile
-         so it never covers the image. */
-      .about-badge {
-        position: static;
-        width: 100%;
-        max-width: none;
+      .about-section .section-text {
+        color: var(--text);
+      }
+
+      .about-copy {
+        margin-bottom: 15px;
+      }
+
+      .about-divider {
+        margin: 28px 0;
+        background: rgba(11, 30, 61, 0.14);
+      }
+
+      .about-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 20px;
+      }
+
+      .about-feature {
+        padding: 0;
+      }
+
+      .about-feature:hover {
+        transform: none;
+      }
+
+      .about-feature h4 {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+
+      /* -------------------------
+         MOBILE SERVICES
+      ------------------------- */
+
+      .service-content h3 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+
+      /* -------------------------
+         MOBILE WHY
+      ------------------------- */
+
+      .why-card h3 {
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+
+      /* -------------------------
+         MOBILE PROCESS
+      ------------------------- */
+
+      .process-card h3 {
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+
+      /* -------------------------
+         MOBILE MOVING ASSISTANCE
+      ------------------------- */
+
+      .highlight-section {
+        padding: 70px 0;
+      }
+
+      .highlight-section .section-heading {
+        margin-bottom: 45px;
+      }
+
+      .highlight-section .section-title {
+        font-size: 29px;
+      }
+
+      .highlight-section .section-heading .section-text {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .moving-process {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      /* Vertical connecting line */
+
+      .moving-process::before {
+        top: 32px;
+        bottom: 32px;
+        left: 31px;
+        right: auto;
+
+        width: 2px;
+        height: auto;
+      }
+
+      .moving-step {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        column-gap: 20px;
+
+        text-align: left;
+
+        padding: 0 0 32px;
+        background: transparent;
+      }
+
+      .moving-step:last-child {
+        padding-bottom: 0;
+      }
+
+      .moving-icon {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+
         margin: 0;
-        padding: 18px 20px;
-        border-left: 5px solid var(--yellow);
-        border-radius: 6px;
-        box-shadow: 0 8px 22px rgba(11, 30, 61, 0.12);
+
+        width: 64px;
+        height: 64px;
+
+        border-color: var(--light);
       }
 
-      .about-badge strong {
-        font-size: 24px;
+      .moving-step h3 {
+        margin: 8px 0 5px;
+        font-size: 17px;
+        font-weight: 600;
       }
 
-      .about-badge small {
-        display: block;
+      .moving-step p {
+        font-size: 13px;
         line-height: 1.55;
       }
 
-      .highlight-box {
-        padding: 30px 25px;
+
+      /* -------------------------
+         MOBILE CTA
+      ------------------------- */
+
+      .cta-content h2 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.1;
       }
+
+
+      /* -------------------------
+         MOBILE CONTACT
+      ------------------------- */
 
       .contact-form {
         padding: 25px 20px;
         margin-top: 35px;
+      }
+
+      .contact-form h3 {
+        font-size: 21px;
+        font-weight: 700;
       }
 
       .footer-buttons {
@@ -1439,6 +1811,7 @@
         height: 19px;
       }
 
+
       /* Strong but smooth mobile reveal */
 
       .scroll-reveal {
@@ -1452,6 +1825,7 @@
       }
 
     }
+
 
     @media (max-width: 380px) {
 
@@ -1485,7 +1859,7 @@
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 33px;
       }
 
       .hero-description {
@@ -1505,10 +1879,27 @@
       }
 
       .section-title {
-        font-size: 29px;
+        font-size: 26px;
+      }
+
+      .highlight-section .section-title {
+        font-size: 28px;
+      }
+
+      .moving-step {
+        column-gap: 16px;
+      }
+
+      .moving-step h3 {
+        font-size: 17px;
+      }
+
+      .moving-step p {
+        font-size: 12.5px;
       }
 
     }
+
 
     /* =========================================================
        REDUCED MOTION
@@ -1540,7 +1931,9 @@
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =======================================================
        NAVBAR
@@ -1574,6 +1967,7 @@
 
       </a>
 
+
       <button
         class="navbar-toggler professional-toggler"
         type="button"
@@ -1583,8 +1977,11 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
+
 
       <div
         class="collapse navbar-collapse"
@@ -1594,38 +1991,77 @@
         <ul class="navbar-nav ms-auto professional-dropdown">
 
           <li class="nav-item">
+
             <a class="nav-link" href="#home">
+
               <i data-lucide="house"></i>
-              <span class="ms-2">Home</span>
+
+              <span class="ms-2">
+                Home
+              </span>
+
             </a>
+
           </li>
 
+
           <li class="nav-item">
+
             <a class="nav-link" href="#about">
+
               <i data-lucide="building-2"></i>
-              <span class="ms-2">About Us</span>
+
+              <span class="ms-2">
+                About Us
+              </span>
+
             </a>
+
           </li>
 
+
           <li class="nav-item">
+
             <a class="nav-link" href="#services">
+
               <i data-lucide="package"></i>
-              <span class="ms-2">Services</span>
+
+              <span class="ms-2">
+                Services
+              </span>
+
             </a>
+
           </li>
 
+
           <li class="nav-item">
+
             <a class="nav-link" href="#reviews">
+
               <i data-lucide="star"></i>
-              <span class="ms-2">Reviews</span>
+
+              <span class="ms-2">
+                Reviews
+              </span>
+
             </a>
+
           </li>
 
+
           <li class="nav-item">
+
             <a class="nav-link" href="#contact">
+
               <i data-lucide="phone"></i>
-              <span class="ms-2">Contact Us</span>
+
+              <span class="ms-2">
+                Contact Us
+              </span>
+
             </a>
+
           </li>
 
         </ul>
@@ -1648,20 +2084,25 @@
       <div class="hero-content">
 
         <div class="hero-label">
-          PROFESSIONAL FURNITURE REMOVALS
+          Professional Furniture Removals
         </div>
 
+
         <h1>
-          MOVING MADE <span>SIMPLE.</span>
+          Moving Made <span>Simple.</span>
         </h1>
 
+
         <p class="hero-description">
+
           Based in Secunda, Mpumalanga, SSS Furniture
           Removals provides professional moving services nationwide.
           We wrap, pack, load, transport and unload your belongings
           with care — helping make your move easier, safer and less
           stressful.
+
         </p>
+
 
         <div class="hero-buttons">
 
@@ -1669,16 +2110,27 @@
             href="#contact"
             class="btn-main btn-quote"
           >
+
             <i data-lucide="message-square"></i>
-            <span class="ms-2">Get a Free Quote</span>
+
+            <span class="ms-2">
+              Get a Free Quote
+            </span>
+
           </a>
+
 
           <a
             href="tel:+27664316228"
             class="btn-outline-main"
           >
+
             <i data-lucide="phone"></i>
-            <span class="ms-2">Call Now</span>
+
+            <span class="ms-2">
+              Call Now
+            </span>
+
           </a>
 
         </div>
@@ -1695,25 +2147,25 @@
         <div class="hero-bottom-inner">
 
           <div>
-            <span>HOUSEHOLD MOVES</span>
+            <span>Household Moves</span>
           </div>
 
           <div>•</div>
 
           <div>
-            <span>OFFICE RELOCATIONS</span>
+            <span>Office Relocations</span>
           </div>
 
           <div>•</div>
 
           <div>
-            <span>PACKING & WRAPPING</span>
+            <span>Packing & Wrapping</span>
           </div>
 
           <div>•</div>
 
           <div>
-            <span>NATIONWIDE MOVES</span>
+            <span>Nationwide Moves</span>
           </div>
 
         </div>
@@ -1733,99 +2185,127 @@
 
     <div class="container">
 
-      <div class="row align-items-center g-5">
+      <div class="about-panel scroll-reveal">
 
-        <div class="col-lg-6">
+        <div class="row align-items-center g-5">
 
-          <div class="about-image-wrap scroll-reveal">
+          <div class="col-lg-5">
 
-            <img
-              src="img2.jpeg"
-              alt="SSS Furniture Removals"
-              class="about-image"
-            >
-
-            <div class="about-badge">
-
-              <strong>SECUNDA</strong>
-
-              <small>
-                Proudly based in Mpumalanga and moving customers
-                nationwide.
-              </small>
-
+            <div class="section-label">
+              About SSS Furniture Removals
             </div>
+
+            <h2 class="section-title">
+
+              Moving Your Home.<br>
+
+              <span>
+                Moving What Matters.
+              </span>
+
+            </h2>
+
+          </div>
+
+
+          <div class="col-lg-7">
+
+            <p class="section-text about-copy">
+
+              At SSS Furniture Removals, we understand that moving is
+              more than simply transporting furniture. It is about
+              moving the things that matter to you safely and with care.
+
+            </p>
+
+
+            <p class="section-text about-copy">
+
+              Based in Secunda, Mpumalanga, we provide professional
+              furniture removal and relocation services locally and
+              nationwide. Whether you're moving home, relocating an
+              office, or simply need furniture transported, our team
+              is ready to assist.
+
+            </p>
+
+
+            <p class="section-text mb-0">
+
+              From wrapping and packing to loading, transportation and
+              unloading, we help take care of the moving process from
+              start to finish.
+
+            </p>
 
           </div>
 
         </div>
 
 
-        <div class="col-lg-6 scroll-reveal">
+        <div class="about-divider"></div>
 
-          <div class="section-label">
-            About SSS Furniture Removals
+
+        <div class="about-features">
+
+          <div class="about-feature">
+
+            <div class="about-feature-icon">
+
+              <i data-lucide="package"></i>
+
+            </div>
+
+            <h4>
+              Professional Packing
+            </h4>
+
           </div>
 
-          <h2 class="section-title">
-            MOVING YOUR HOME.<br>
-            <span>MOVING WHAT MATTERS.</span>
-          </h2>
 
-          <p class="section-text about-copy">
-            At SSS Furniture Removals, we understand that
-            moving is more than simply transporting furniture — it is
-            about moving the things that matter to you safely and with
-            care.
-          </p>
+          <div class="about-feature">
 
-          <p class="section-text about-copy">
-            Based in Secunda, Mpumalanga, we provide professional
-            furniture removal and relocation services nationwide.
-            Whether you are moving to a new home, relocating an office,
-            or simply need furniture transported, our team is ready
-            to assist.
-          </p>
+            <div class="about-feature-icon">
 
-          <p class="section-text about-copy">
-            We take care of the process from start to finish,
-            including wrapping, packing, loading, transporting and
-            unloading your belongings. Our goal is to make every move
-            as smooth, organised and stress-free as possible while
-            treating your furniture and personal belongings with the
-            care they deserve.
-          </p>
+              <i data-lucide="shield-check"></i>
 
-          <p class="section-text about-copy">
-            With a focus on reliable service, reasonable pricing and
-            professional workmanship, SSS Furniture
-            Removals is committed to making your move easier —
-            wherever you are going.
-          </p>
+            </div>
 
-          <ul class="about-list">
+            <h4>
+              Careful Handling
+            </h4>
 
-            <li>
-              <i data-lucide="circle-check"></i>
-              Professional wrapping and packing
-            </li>
+          </div>
 
-            <li>
-              <i data-lucide="circle-check"></i>
-              Careful loading and unloading
-            </li>
 
-            <li>
-              <i data-lucide="circle-check"></i>
-              Local and nationwide moves
-            </li>
+          <div class="about-feature">
 
-            <li>
-              <i data-lucide="circle-check"></i>
-              Friendly and professional service
-            </li>
+            <div class="about-feature-icon">
 
-          </ul>
+              <i data-lucide="truck"></i>
+
+            </div>
+
+            <h4>
+              Reliable Transport
+            </h4>
+
+          </div>
+
+
+          <div class="about-feature">
+
+            <div class="about-feature-icon">
+
+              <i data-lucide="map"></i>
+
+            </div>
+
+            <h4>
+              Nationwide Service
+            </h4>
+
+          </div>
 
         </div>
 
@@ -1851,13 +2331,18 @@
         </div>
 
         <h2 class="section-title">
-          WE <span>MOVE IT ALL.</span>
+          We <span>Move It All.</span>
         </h2>
 
-        <p class="section-text mx-auto" style="max-width:760px;">
+        <p
+          class="section-text mx-auto"
+          style="max-width:760px;"
+        >
+
           From packing your belongings to safely unloading them at
           your destination, we provide a complete moving service
           designed around your needs.
+
         </p>
 
       </div>
@@ -1881,7 +2366,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="house"></i>
+
               </div>
 
               <h3>
@@ -1916,7 +2403,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="building-2"></i>
+
               </div>
 
               <h3>
@@ -1951,7 +2440,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="route"></i>
+
               </div>
 
               <h3>
@@ -1985,7 +2476,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="package"></i>
+
               </div>
 
               <h3>
@@ -2020,7 +2513,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="package-open"></i>
+
               </div>
 
               <h3>
@@ -2055,7 +2550,9 @@
             <div class="service-content">
 
               <div class="service-icon">
+
                 <i data-lucide="truck"></i>
+
               </div>
 
               <h3>
@@ -2098,19 +2595,27 @@
           </div>
 
           <h2 class="section-title">
-            RELIABLE MOVES.<br>
-            <span>CAREFUL HANDS.</span>
+
+            Reliable Moves.<br>
+
+            <span>
+              Careful Hands.
+            </span>
+
           </h2>
 
         </div>
 
+
         <div class="col-lg-6">
 
           <p class="section-text">
+
             We know that your furniture and personal belongings
             are important. That's why we focus on careful handling,
             professional service and making your moving experience
             as stress-free as possible.
+
           </p>
 
         </div>
@@ -2126,7 +2631,9 @@
           <div class="why-card">
 
             <div class="why-icon">
+
               <i data-lucide="shield-check"></i>
+
             </div>
 
             <h3>
@@ -2148,7 +2655,9 @@
           <div class="why-card">
 
             <div class="why-icon">
+
               <i data-lucide="clock-3"></i>
+
             </div>
 
             <h3>
@@ -2170,7 +2679,9 @@
           <div class="why-card">
 
             <div class="why-icon">
+
               <i data-lucide="users"></i>
+
             </div>
 
             <h3>
@@ -2192,7 +2703,9 @@
           <div class="why-card">
 
             <div class="why-icon">
+
               <i data-lucide="map-pin"></i>
+
             </div>
 
             <h3>
@@ -2230,12 +2743,17 @@
         </div>
 
         <h2 class="section-title">
-          A SIMPLE WAY TO <span>MOVE.</span>
+          A Simple Way To <span>Move.</span>
         </h2>
 
-        <p class="section-text mx-auto" style="max-width:700px;">
+        <p
+          class="section-text mx-auto"
+          style="max-width:700px;"
+        >
+
           We make the moving process straightforward, from your
           first enquiry through to delivery.
+
         </p>
 
       </div>
@@ -2339,58 +2857,141 @@
 
 
   <!-- =======================================================
-       HIGHLIGHT
+       COMPLETE MOVING ASSISTANCE
   ======================================================== -->
 
   <section class="highlight-section section-padding">
 
     <div class="container">
 
-      <div class="highlight-box scroll-reveal">
+      <div class="section-heading scroll-reveal">
 
         <div class="section-label">
           Complete Moving Assistance
         </div>
 
-        <h2>
-          WE WRAP. WE PACK. <span>WE MOVE.</span>
+        <h2 class="section-title">
+          We Wrap. We Pack. <span>We Move.</span>
         </h2>
 
-        <p>
+        <p class="section-text">
+
           Whether you need a complete household move or simply
           need furniture transported from one location to another,
           our team can assist. We take care of the heavy work so
           you can focus on settling into your new space.
+
         </p>
 
-        <ul class="highlight-list">
+      </div>
 
-          <li>
-            <i data-lucide="circle-check"></i>
+
+      <div class="moving-process scroll-reveal">
+
+
+        <!-- WRAPPING -->
+
+        <div class="moving-step">
+
+          <div class="moving-icon">
+
+            <i data-lucide="package-open"></i>
+
+          </div>
+
+          <h3>
             Wrapping
-          </li>
+          </h3>
 
-          <li>
-            <i data-lucide="circle-check"></i>
+          <p>
+            We protect your furniture before the move begins.
+          </p>
+
+        </div>
+
+
+        <!-- PACKING -->
+
+        <div class="moving-step">
+
+          <div class="moving-icon">
+
+            <i data-lucide="package"></i>
+
+          </div>
+
+          <h3>
             Packing
-          </li>
+          </h3>
 
-          <li>
-            <i data-lucide="circle-check"></i>
+          <p>
+            Your belongings are packed carefully and securely.
+          </p>
+
+        </div>
+
+
+        <!-- LOADING -->
+
+        <div class="moving-step">
+
+          <div class="moving-icon">
+
+            <i data-lucide="container"></i>
+
+          </div>
+
+          <h3>
             Loading
-          </li>
+          </h3>
 
-          <li>
-            <i data-lucide="circle-check"></i>
+          <p>
+            Our team handles the heavy lifting and loading.
+          </p>
+
+        </div>
+
+
+        <!-- TRANSPORT -->
+
+        <div class="moving-step">
+
+          <div class="moving-icon">
+
+            <i data-lucide="truck"></i>
+
+          </div>
+
+          <h3>
             Transport
-          </li>
+          </h3>
 
-          <li>
-            <i data-lucide="circle-check"></i>
+          <p>
+            Your furniture is transported to its destination.
+          </p>
+
+        </div>
+
+
+        <!-- UNLOADING -->
+
+        <div class="moving-step">
+
+          <div class="moving-icon">
+
+            <i data-lucide="package-check"></i>
+
+          </div>
+
+          <h3>
             Unloading
-          </li>
+          </h3>
 
-        </ul>
+          <p>
+            We unload carefully and help complete your move.
+          </p>
+
+        </div>
 
       </div>
 
@@ -2414,31 +3015,45 @@
         </div>
 
         <h2>
-          LET'S GET YOU <span>MOVING.</span>
+          Let's Get You <span>Moving.</span>
         </h2>
 
         <p>
+
           From Secunda to anywhere in South Africa, SSS
           Furniture Removals is ready to help with your next move.
           Contact us today for a quote.
+
         </p>
+
 
         <div class="hero-buttons justify-content-center">
 
           <a
             href="#contact"
-            class="btn-main"
+            class="btn-main btn-quote"
           >
+
             <i data-lucide="message-square"></i>
-            <span class="ms-2">Get A Free Quote</span>
+
+            <span class="ms-2">
+              Get A Free Quote
+            </span>
+
           </a>
+
 
           <a
             href="tel:+27664316228"
             class="btn-outline-main"
           >
+
             <i data-lucide="phone"></i>
-            <span class="ms-2">066 431 6228</span>
+
+            <span class="ms-2">
+              066 431 6228
+            </span>
+
           </a>
 
         </div>
@@ -2465,12 +3080,17 @@
         </div>
 
         <h2 class="section-title">
-          WHAT OUR CUSTOMERS <span>SAY.</span>
+          What Our Customers <span>Say.</span>
         </h2>
 
-        <p class="section-text mx-auto" style="max-width:700px;">
+        <p
+          class="section-text mx-auto"
+          style="max-width:700px;"
+        >
+
           We are proud to have helped customers with their moves
           and appreciate every review and recommendation.
+
         </p>
 
       </div>
@@ -2490,10 +3110,12 @@
             </div>
 
             <p class="review-text">
+
               “No complains! no worries! no stress! They packed all
               my items up neatly and safely, and placed them in the
               same manner into my new home. Great stuff guys,
               thanks!”
+
             </p>
 
             <div class="review-name">
@@ -2520,9 +3142,11 @@
             </div>
 
             <p class="review-text">
+
               “Quick, reasonable prices, clean and very professional.
               Moved from Secunda to Pretoria. I highly recommend
               them.”
+
             </p>
 
             <div class="review-name">
@@ -2549,11 +3173,13 @@
             </div>
 
             <p class="review-text">
+
               “Affordable and Amazing service. Took great care while
               loading and Unloading our furniture. Staff is also very
               friendly. Would definitely use you guys in the future
               again and most definitely recommend to family and
               friends.”
+
             </p>
 
             <div class="review-name">
@@ -2590,7 +3216,7 @@
         </div>
 
         <h2 class="section-title">
-          GOT QUESTIONS? <span>WE CAN HELP.</span>
+          Got Questions? <span>We Can Help.</span>
         </h2>
 
       </div>
@@ -2613,10 +3239,13 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq1"
                 >
+
                   Do you move furniture nationwide?
+
                 </button>
 
               </h2>
+
 
               <div
                 id="faq1"
@@ -2625,9 +3254,11 @@
               >
 
                 <div class="accordion-body">
+
                   Yes. SSS Furniture Removals is based
                   in Secunda, Mpumalanga and provides furniture
                   removal services nationwide.
+
                 </div>
 
               </div>
@@ -2645,10 +3276,13 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq2"
                 >
+
                   Do you pack and wrap furniture?
+
                 </button>
 
               </h2>
+
 
               <div
                 id="faq2"
@@ -2657,9 +3291,11 @@
               >
 
                 <div class="accordion-body">
+
                   Yes. We can wrap and pack your belongings as part
                   of the moving service, helping protect your items
                   during handling and transportation.
+
                 </div>
 
               </div>
@@ -2677,10 +3313,13 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq3"
                 >
+
                   Do you handle loading and unloading?
+
                 </button>
 
               </h2>
+
 
               <div
                 id="faq3"
@@ -2689,9 +3328,11 @@
               >
 
                 <div class="accordion-body">
+
                   Yes. Our service can include loading your
                   belongings, transporting them and unloading them
                   at your destination.
+
                 </div>
 
               </div>
@@ -2709,10 +3350,13 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq4"
                 >
+
                   How do I get a quote?
+
                 </button>
 
               </h2>
+
 
               <div
                 id="faq4"
@@ -2721,9 +3365,11 @@
               >
 
                 <div class="accordion-body">
+
                   Contact us on 066 431 6228 or 065 872 6032, or
                   send us your moving details through the contact
                   section below.
+
                 </div>
 
               </div>
@@ -2741,10 +3387,13 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq5"
                 >
+
                   What are your business hours?
+
                 </button>
 
               </h2>
+
 
               <div
                 id="faq5"
@@ -2753,8 +3402,10 @@
               >
 
                 <div class="accordion-body">
+
                   Our business hours are Monday to Friday,
                   08:00 to 17:00.
+
                 </div>
 
               </div>
@@ -2793,23 +3444,34 @@
           </div>
 
           <h2 class="section-title">
-            LET'S TALK ABOUT<br>
-            <span>YOUR MOVE.</span>
+
+            Let's Talk About<br>
+
+            <span>
+              Your Move.
+            </span>
+
           </h2>
 
+
           <p class="section-text">
+
             Tell us what you need moved and where you're moving to.
             Our team will be happy to discuss your requirements and
             provide a quote.
+
           </p>
 
 
           <div class="contact-info-card mt-4">
 
+
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="phone"></i>
+
               </div>
 
               <div>
@@ -2830,7 +3492,9 @@
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="smartphone"></i>
+
               </div>
 
               <div>
@@ -2851,7 +3515,9 @@
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="mail"></i>
+
               </div>
 
               <div>
@@ -2872,7 +3538,9 @@
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="map-pin"></i>
+
               </div>
 
               <div>
@@ -2882,8 +3550,10 @@
                 </h4>
 
                 <p>
+
                   Detroit Crescent, Ext 53,<br>
                   Secunda, South Africa
+
                 </p>
 
               </div>
@@ -2894,7 +3564,9 @@
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="clock-3"></i>
+
               </div>
 
               <div>
@@ -2904,8 +3576,10 @@
                 </h4>
 
                 <p>
+
                   Monday – Friday<br>
                   08:00 – 17:00
+
                 </p>
 
               </div>
@@ -2916,7 +3590,9 @@
             <div class="contact-info-item">
 
               <div class="contact-icon">
+
                 <i data-lucide="truck"></i>
+
               </div>
 
               <div>
@@ -2949,13 +3625,18 @@
               Request A Free Quote
             </h3>
 
-            <form action="https://formspree.io/f/xjyvaqky" method="POST">
+
+            <form
+              action="https://formspree.io/f/xjyvaqky"
+              method="POST"
+            >
 
               <input
                 type="hidden"
                 name="subject"
                 value="Furniture Removal Quote Request - {{ name }}"
               >
+
 
               <div class="row g-3">
 
@@ -3062,7 +3743,11 @@
                     required
                   >
 
-                    <option value="" selected disabled>
+                    <option
+                      value=""
+                      selected
+                      disabled
+                    >
                       Select an option
                     </option>
 
@@ -3121,7 +3806,9 @@
 
                     <i data-lucide="send"></i>
 
-                    <span class="ms-2">Request My Quote</span>
+                    <span class="ms-2">
+                      Request My Quote
+                    </span>
 
                   </button>
 
@@ -3166,13 +3853,18 @@
             letter-spacing:1.5px;
             margin-top:5px;
           ">
+
             REMOVALS
+
           </div>
 
+
           <p class="footer-description">
+
             Professional furniture removals based in Secunda,
             Mpumalanga. We wrap, pack, move and unload with care,
             providing moving services nationwide.
+
           </p>
 
 
@@ -3182,16 +3874,23 @@
               href="tel:+27664316228"
               class="footer-btn footer-btn-call"
             >
+
               <i data-lucide="phone"></i>
+
               Call 066 431 6228
+
             </a>
+
 
             <a
               href="mailto:sssmovers.countrywide@gmail.com"
               class="footer-btn footer-btn-email"
             >
+
               <i data-lucide="mail"></i>
+
               Email Us
+
             </a>
 
           </div>
@@ -3287,8 +3986,10 @@
             <i data-lucide="map-pin"></i>
 
             <span>
+
               Detroit Crescent, Ext 53,<br>
               Secunda, South Africa
+
             </span>
 
           </div>
@@ -3299,8 +4000,10 @@
             <i data-lucide="clock-3"></i>
 
             <span>
+
               Monday – Friday<br>
               08:00 – 17:00
+
             </span>
 
           </div>
@@ -3331,7 +4034,9 @@
     class="floating-call"
     aria-label="Call SSS Countrywide Furniture Removals"
   >
+
     <i data-lucide="phone"></i>
+
   </a>
 
 
@@ -3350,7 +4055,7 @@
 
     /* =======================================================
        CREATE MODERN LUCIDE ICONS
-    ======================================================== */
+    ======================================================= */
 
     lucide.createIcons();
 
@@ -3358,7 +4063,7 @@
     /* =======================================================
        SCROLL REVEAL ANIMATIONS
        Works on desktop and mobile
-    ======================================================== */
+    ======================================================= */
 
     document.addEventListener("DOMContentLoaded", function() {
 
@@ -3366,6 +4071,7 @@
         document.querySelectorAll(
           ".scroll-reveal, .scroll-reveal-small"
         );
+
 
       const revealObserver =
         new IntersectionObserver(
@@ -3390,6 +4096,7 @@
           }
         );
 
+
       revealElements.forEach(function(element) {
 
         revealObserver.observe(element);
@@ -3401,7 +4108,7 @@
 
     /* =======================================================
        CLOSE MOBILE MENU AFTER CLICKING A LINK
-    ======================================================== */
+    ======================================================= */
 
     document.querySelectorAll(
       '#mainNavbar .nav-link'
@@ -3412,10 +4119,12 @@
         const navbar =
           document.getElementById('mainNavbar');
 
+
         if (navbar.classList.contains('show')) {
 
           const bsCollapse =
             bootstrap.Collapse.getInstance(navbar);
+
 
           if (bsCollapse) {
             bsCollapse.hide();
